@@ -1,0 +1,34 @@
+.App-header .header-menu{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: transparent;
+    height: 100%;
+}
+
+.header-menu .header-menu-list{
+    float: left;
+}
+
+.header-menu .header-menu-list a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 100%;
+    width: 20px;
+}
+
+.header-menu-list a:hover:not(.active){
+    background-color: #ddd;
+}
+
+.header-menu-list a.active{
+    background-color: #4caf50;
+}
+
+.header-menu-list .header-icons{
+    height: 100%;
+    max-width: 20px;
+}
