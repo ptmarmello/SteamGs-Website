@@ -5,6 +5,7 @@
 html, body{
   margin: 0;
   padding:0;
+  background-color:#f8f8fb;
 }
 a {
   color:inherit;
@@ -42,8 +43,10 @@ a {
   }
   .App-mainContent{
     max-width: 100%;
-    padding: 112px 150px 200px;
-    padding-right: 88px;
+    padding: 112px 5em 200px;
+    padding-right: 5em;
+    justify-content: center;
+    align-items: center;
   }
   .App-fullpage{
     height: 100%;
@@ -53,7 +56,7 @@ a {
   .App-fullpage-content{
     width:100%;
     height: 100%;
-    display: flex;
+    display: block;
     margin: 0;
     padding: 0;
   }

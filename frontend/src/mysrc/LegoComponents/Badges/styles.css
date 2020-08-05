@@ -1,0 +1,46 @@
+/* O grid que colocar aqui, depois tem que transferir para o 
+Portfólio ou para o App.css
+
+
+Além de incluir e pesquisar como fazer loop com funções
+e adicionar os parâmetros para tal
+ */
+
+.centered > div{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-grid-template-4{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px, 284px));
+    grid-gap:16px;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.badge{
+    background-color: white;
+    box-shadow: 0 0 3px 0;
+    border-radius: 12px;
+    min-height: 100px;
+    min-width: 210px;
+    max-height: 400px;
+    align-items: center;
+    align-content: center;
+}
+
+.badge-header-bg, .badge-footer-bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 20px;
+    max-height: 80px;
+}
+
+.section-title, .section-subtitle {
+    display: inline;
+    text-align: left;
+}

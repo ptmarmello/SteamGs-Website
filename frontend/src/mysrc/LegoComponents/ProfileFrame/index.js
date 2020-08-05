@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './styles.css';
-import { FiPlus } from 'react-icons/fi';
+import { FiSend, FiPlusCircle } from 'react-icons/fi';
 
 export default function ProfFrame(){
     return(
@@ -21,77 +21,79 @@ export default function ProfFrame(){
                             <a href="#HeaderSubtitle" className="header-subtitle">Aluno de Eng. Elétrica PUC-Rio</a>
                         </p>
                     </div>
-                    
-                    <div className="user-header-numbs numbs-grid">
-                        <div className="numbs">
-                            <p className="numbs-title">1000</p>
-                            <p className="numbs-sub">Projects</p>
-                        </div>
-                        <div className="numbs">
-                            <p className="numbs-title">1000</p>
-                            <p className="numbs-sub">Projects</p>
-                        </div>
-                        <div className="numbs">
-                            <p className="numbs-title">1000</p>
-                            <p className="numbs-sub">Projects</p>
-                        </div>
-                        <div className="flags">
-                            <div className="flag-country first">
-                                <a href="#Country" className="country-flag">Img of Country</a>
-                                <p className="country-flag-sub">Country Name</p>
+                    <div className="user-header-middle">
+                        <div className="user-header-numbs numbs-grid">
+                            <div className="numbs">
+                                <p className="numbs-title">1000</p>
+                                <p className="numbs-sub">Projects</p>
                             </div>
-                            <div className="flag-city second">
-                                <a href="#City" className="city-flag">Img of City</a>
-                                <p className="city-flag-sub">City Name</p>
+                            <div className="numbs">
+                                <p className="numbs-title">1000</p>
+                                <p className="numbs-sub">Projects</p>
                             </div>
+                            <div className="numbs">
+                                <p className="numbs-title">1000</p>
+                                <p className="numbs-sub">Projects</p>
+                            </div>
+                            <div className="flags">
+                                <div className="flag first">
+                                    <a href="#Country" className="country-flag">Img of Country</a>
+                                    <p className="flag-sub">Country Name</p>
+                                </div>
+                                <div className="flag second">
+                                    <a href="#City" className="city-flag">Img of City</a>
+                                    <p className="flag-sub">City Name</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="user-header-xoxomidia">
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Instagram</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Twitter</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Twitch</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Youtube</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Discord</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of Spotify</p>
+                                </a>
+                            </div>
+                            <div className="user-header-xoxo-links">
+                                <a href="#XoxoLink" className="xoxo-link">
+                                    <p>Img of </p>
+                                </a>
+                            </div>
+                            
                         </div>
                     </div>
-                    <div className="user-header-xoxomidia">
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Instagram</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Twitter</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Twitch</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Youtube</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Discord</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of Spotify</p>
-                            </a>
-                        </div>
-                        <div className="user-header-xoxo-links">
-                            <a href="#XoxoLink" className="xoxo-link">
-                                <p>Img of </p>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    <div className="user-header-resume">
+                   <div className="user-header-resume">
                         <div className="user-header-charts chart-grid"></div>
                         <div className="user-header-action button-grid">
                             <button className="user-header-action-button first">
-                                <span>Send a Message</span>
+                                <FiSend size="20" color="#fff"/>
                             </button>
+                            <div className="button-space"></div>
                             <button className="user-header-action-button second">
-                                <span>Add Friend <FiPlus/> </span>
+                                <FiPlusCircle size="20" color="#fff"/>
                             </button>
                         </div>
                     </div>
