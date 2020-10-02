@@ -1,7 +1,6 @@
 import React from 'react';
-
 import './styles.css';
-import { FiSend, FiPlusCircle } from 'react-icons/fi';
+import { FiSend, FiPlusCircle, FiInstagram, FiTwitter, FiYoutube } from 'react-icons/fi';
 
 export default function ProfFrame(){
     return(
@@ -48,40 +47,40 @@ export default function ProfFrame(){
                         </div>
                         <div className="user-header-xoxomidia">
                             <div className="user-header-xoxo-links">
-                                <a href="#XoxoLink" className="xoxo-link">
-                                    <p>Img of Instagram</p>
+                                <a href="//instagram.com" target="blank" className="xoxo-link">
+                                    <FiInstagram size="30" style={{color:"#C13584"}}></FiInstagram>
                                 </a>
                             </div>
                             <div className="user-header-xoxo-links">
-                                <a href="#XoxoLink" className="xoxo-link">
-                                    <p>Img of Twitter</p>
+                                <a href="//twitter.com" target blank className="xoxo-link">
+                                    <FiTwitter size="30" style={{color:"#1DA1F2"}}></FiTwitter>
                                 </a>
                             </div>
-                            <div className="user-header-xoxo-links">
+                            {/* <div className="user-header-xoxo-links">
                                 <a href="#XoxoLink" className="xoxo-link">
                                     <p>Img of Twitch</p>
                                 </a>
-                            </div>
+                            </div> */}
                             <div className="user-header-xoxo-links">
                                 <a href="#XoxoLink" className="xoxo-link">
-                                    <p>Img of Youtube</p>
+                                    <FiYoutube style={{color:"#FF0000"}}></FiYoutube>
                                 </a>
                             </div>
-                            <div className="user-header-xoxo-links">
+                            {/* <div className="user-header-xoxo-links">
                                 <a href="#XoxoLink" className="xoxo-link">
                                     <p>Img of Discord</p>
                                 </a>
-                            </div>
+                            </div> */}
                             <div className="user-header-xoxo-links">
                                 <a href="#XoxoLink" className="xoxo-link">
                                     <p>Img of Spotify</p>
                                 </a>
                             </div>
-                            <div className="user-header-xoxo-links">
+                            {/* <div className="user-header-xoxo-links">
                                 <a href="#XoxoLink" className="xoxo-link">
                                     <p>Img of </p>
                                 </a>
-                            </div>
+                            </div> */}
                             
                         </div>
                     </div>
