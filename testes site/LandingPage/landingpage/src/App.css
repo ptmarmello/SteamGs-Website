@@ -1,0 +1,64 @@
+@media screen and (min-width: 1000px){
+    .App{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .App-home{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    .App-fullframe{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
+        height: 92vh;
+        width: auto;
+
+        padding: 0.75rem;
+
+        box-sizing: border-box;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .App-forms{
+        display: flex;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+
+    .App-footer{
+        width: 99%;
+        height: 2.25rem;
+        display: flex;
+
+        margin-top: 2rem;
+        padding: 0.25rem;
+
+        background: #f5f5fd;
+    }
+
+}
+
+
