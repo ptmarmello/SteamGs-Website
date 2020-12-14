@@ -1,0 +1,24 @@
+.HeaderContainer{
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.HeaderBox{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+
+}
+
+.HeaderButtons{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    padding-top: 6em;
+
+}

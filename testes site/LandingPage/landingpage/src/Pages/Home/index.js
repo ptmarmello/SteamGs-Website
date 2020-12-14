@@ -4,13 +4,16 @@ import styled from 'styled-components';
 import Fullforms from './Legos/Forms';
 import FullFooter from './Legos/Footer';
 
+import './home.css';
+
 const SectionFrame = styled.section`
     display: block;
-    background:#f5f5fd;
+    background: transparent;
     width: 100%;
     min-width: 380px;
     height: 100%;
     min-height: 450px;
+    margin:0 auto;
 
     justify-content: center;
     align-items: center;
@@ -32,7 +35,7 @@ const HeaderText = styled.h1`
     width:60%;
     margin: 0;
     padding: 0;
-    justify-content: center;
+    align-items: center;
     font-size: 36px;
 
     ${props => props.forms &&`
@@ -47,15 +50,15 @@ const HeaderText = styled.h1`
 `;
 
 const HeaderButton = styled.button`
-    width: 80%;
-    height: 3rem;
+    width: 40%;
+    height: 5rem;
     outline: none;
 
     background: #e32;
     font-size:24px;
 
-    margin-top:2em;
-    margin-bottom:2em;
+    margin-top: 3em;
+    margin-bottom: 2em;
     border-radius: 16px;
     border-style: none;
 
@@ -63,8 +66,8 @@ const HeaderButton = styled.button`
     bottom: 0px;
 
     :active{
-        width:78%;
-        height:2.9rem;
+        width:38%;
+        height:4.8rem;
     }
 
 `;
@@ -90,25 +93,30 @@ export default function Home(){
 
     return(
         <div className="App-home">
-            <Fullframe id="FirstFrame" >
-               <SectionFrame left>
-
-               </SectionFrame>
-               <SectionFrame right>
-                    <HeaderText header>Somos o Primeiro Ambiente FullLab do Brasil!</HeaderText>
-                    
-                    <span>Quer saber como ser um profissional melhor?</span>
-                    <HeaderButton onClick={()=> {Scroll("ThirdFrame")}}>Quero saber mais!</HeaderButton>
-               </SectionFrame>
+            {/* Colocar uma Nav bar aqui */}
+            <Fullframe id="FirstFrame" mid >
+                <div className="HeaderContainer">
+                    <SectionFrame full>
+                        <div className="HeaderBox">
+                            <HeaderText>Os profissionais do Futuro começam aqui!</HeaderText>
+                            <p>De Estudantes a Profissionais</p>
+                        </div>
+                        <div className="HeaderButtons">
+                            <HeaderButton company/>
+                            <HeaderButton student/>
+                        </div>
+                    </SectionFrame>
+                
+                </div>
             </Fullframe>
-            <Fullframe id="SecondFrame">
+            <Fullframe id="SecondFrame" full >
                 <SectionFrame full>
-
+                    Alguma coisa que mostre melhor sobre o programa
                 </SectionFrame>
             </Fullframe>
-            <Fullframe id="ThirdFrame">
+            <Fullframe id="ThirdFrame" full>
                 <SectionFrame left>
-
+                    caminho ou vantagens do programa
                 </SectionFrame>
 
                 <SectionFrame right>
