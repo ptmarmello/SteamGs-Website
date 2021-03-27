@@ -1,0 +1,11 @@
+.mainContainer{
+    display: flex;
+    width: 90%;
+    height: max-content;
+    min-height: 600px;
+    max-height: 80vh;
+
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}

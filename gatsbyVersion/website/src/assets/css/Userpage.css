@@ -1,0 +1,54 @@
+:root{
+    --bg-color-theone: slategray;
+}
+
+.common-div{
+    margin: 0 auto;
+    width: 35vw;
+    max-width: 550px;
+    height: auto;
+    min-height: 100px;
+    max-height: 500px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.grids{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+.common-grid{
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 4px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    margin-top: 1.5rem;
+    outline: none;
+}
+
+.mini-common-div{
+    background-color: var(--bg-color-theone);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px;
+    outline: none;
+}
+
+.m-right{
+    margin-right: 0.4rem;
+}
+.m-left{
+    margin-left: 0.4rem;
+}
