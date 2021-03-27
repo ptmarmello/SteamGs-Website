@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `${__dirname}/src/data/blog`,
+        path: `${__dirname}/src/data/`,
       },
     },
     {
