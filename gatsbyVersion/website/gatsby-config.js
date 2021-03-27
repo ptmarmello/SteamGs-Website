@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
+    // `gatsby-plugin-page-creator`,
     // `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-sass`,
@@ -46,6 +47,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/assets/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `SteamGroups`,
@@ -55,12 +64,6 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `static/favicon.ico`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/data/`,
       },
     },
     {
