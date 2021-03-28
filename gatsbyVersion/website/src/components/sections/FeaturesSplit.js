@@ -4,9 +4,9 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 
-import split from './../../assets/images/last-01.png';
-import split2 from './../../assets/images/apresentando.png';
-import split3 from './../../assets/images/vantagens2-01.png';
+import split from '../../../static/assets/images/last-01.png';
+import split2 from '../../../static/assets/images/apresentando.png';
+import split3 from '../../../static/assets/images/vantagens2-01.png';
 
 const propTypes = {
   ...SectionSplitProps.types

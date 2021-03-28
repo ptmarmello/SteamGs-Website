@@ -7,8 +7,7 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 // import Modal from '../elements/Modal';
 import { Link } from 'gatsby';
-import something from './../../assets/images/desenvolvaprojetos.png';
-
+import something from '../../../static/assets/images/desenvolvaprojetos.png';
 const propTypes = {
   ...SectionProps.types
 }
@@ -72,7 +71,7 @@ const Hero = ({
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="150">
                 <ButtonGroup>
-                  <Link to="/forcompanies" style={{margin:'10px'}}>
+                  <Link to="/challenge/primeiroChallenge" style={{margin:'10px'}}>
                     <Button color="dark" wideMobile>
                       Acessar Desafios
                     </Button>

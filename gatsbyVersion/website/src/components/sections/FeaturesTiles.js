@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 // import Image from '../elements/Image';
-import pic from './../../assets/images/number0.png';
-import pic2 from './../../assets/images/number1.png';
-import pic3 from './../../assets/images/number.png';
-import pic4 from './../../assets/images/number-2.png';
-import pic5 from './../../assets/images/number-3.png';
-import pic6 from './../../assets/images/number-4.png';
+import pic from '../../../static/assets/images/number0.png';
+import pic2 from '../../../static/assets/images/number1.png';
+import pic3 from '../../../static/assets/images/number.png';
+import pic4 from '../../../static/assets/images/number-2.png';
+import pic5 from '../../../static/assets/images/number-3.png';
+import pic6 from '../../../static/assets/images/number-4.png';
 
 const propTypes = {
   ...SectionTilesProps.types
