@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
-// import pic from './../../assets/images/vantagens-01.png';
-// import pic2 from './../../assets/images/vantagens-01.png';
+// import Image from '../elements/Image';
+import pic from './../../assets/images/number0.png';
+import pic2 from './../../assets/images/number1.png';
 import pic3 from './../../assets/images/number.png';
 import pic4 from './../../assets/images/number-2.png';
 import pic5 from './../../assets/images/number-3.png';
@@ -68,11 +68,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
-                      src={require('./../../assets/images/number.png')}
+                    <img
+                      src={pic}
                       alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -90,11 +90,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
-                      src={require('./../../assets/images/number-2.png')}
+                    <img
+                      src={pic2}
                       alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -112,11 +112,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
+                    <img
                       src={pic3}
                       alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -134,11 +134,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
+                    <img
                       src={pic4}
                       alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -156,11 +156,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
+                    <img
                       src={pic5}
                       alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
@@ -178,11 +178,11 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <Image
+                    <img
                       src={pic6}
                       alt="Features tile icon 06"
-                      width={64}
-                      height={64} />
+                      style={{width:'64px', height: '64px'}}
+                      />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">

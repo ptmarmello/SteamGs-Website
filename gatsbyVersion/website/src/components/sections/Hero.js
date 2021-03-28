@@ -63,14 +63,14 @@ const Hero = ({
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="12">
               Os melhores <span className="text-color-primary">Profissionais</span> começam aqui.
             </h1>
             <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="100">
                 Venha participar do primeiro ambiente de desenvolvimento universitário do Brasil
                 </p>
-              <div className="reveal-from-bottom" data-reveal-delay="600">
+              <div className="reveal-from-bottom" data-reveal-delay="150">
                 <ButtonGroup>
                   <Link to="/forcompanies" style={{margin:'10px'}}>
                     <Button color="dark" wideMobile>
@@ -87,7 +87,7 @@ const Hero = ({
               </div>
             </div>
           </div>
-          <div className="hero-figure reveal-from-bottom" data-reveal-value="20px" data-reveal-delay="800">
+          <div className="hero-figure reveal-from-bottom" data-reveal-value="20px" data-reveal-delay="200">
             {/* <a
               //data-video="https://player.vimeo.com/video/174002812"
               //href="#0"
