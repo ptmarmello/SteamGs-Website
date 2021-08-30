@@ -1,0 +1,39 @@
+.navbar {
+    padding: 0;
+    padding-top: 7vh;
+    width: 90%;
+    margin: 0 auto;
+    /* min-height: 40px;
+    max-height: 80px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar div{
+    display: flex;
+    /* min-width: 20%;
+    max-width: 80%; */
+    align-items: center;
+}
+
+.navbar div ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    min-width: 240px;
+}
+
+.actions{
+    width: 20%;
+    justify-content: center;
+    align-items: right;
+}
+
+.actions *{
+    margin: 0 auto;
+    padding: 0;
+}

@@ -1,0 +1,23 @@
+.InsightSection{
+    display: flex;
+    width: 80%;
+    height: 20vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.InsightSection div{
+    margin: auto auto;
+}
+
+.InsightSection h1{
+    color: #fff;
+    font-size: 28px;
+}
+
+.InsightSection p{
+    color: rgb(187, 187, 187);
+}

@@ -1,0 +1,60 @@
+.AdSection{
+    width: 80vw;
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    color: #fff;
+}
+
+.AdSection *{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.AdSection section{
+    height: 80%;
+}
+
+.AdSection section h1{
+    font-size: 28px;
+}
+
+.AdGrid{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdGrid div{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(243, 243, 243); */
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    /* color: black; */
+}
+
+.AdGrid div *{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.AdGrid div img{
+    border-radius: 24px;
+}
+
+.AdGrid div p {
+    color: rgb(168, 168, 168);
+}

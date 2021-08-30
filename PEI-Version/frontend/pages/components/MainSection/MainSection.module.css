@@ -1,0 +1,49 @@
+.mainSection{
+    width: 100%;
+    max-width: 944px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionDiv{
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.sectionDiv h1{
+    font-size: 52px;
+}
+
+.sectionDiv h1 span{
+    color: #5668DD;
+}
+
+.sectionDiv p{
+    color: rgb(153, 153, 153);
+}
+
+.sectionContainer{
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;    
+}
+
+.sideContainer{
+    margin: 10px 10px;
+    min-width: 40%;
+    min-height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 12px;
+}
+
