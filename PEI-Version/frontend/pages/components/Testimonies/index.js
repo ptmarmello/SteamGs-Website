@@ -1,13 +1,13 @@
 
 
-
+import styles from './Testimonies.module.css';
 
 export default function Testimonies() { 
     return(
         <>
-            <div>
-                Testemunhos de usuários
-            </div>
+            <section className={styles.slideSection}>
+                Algum texto maroto com slides
+            </section>
         </>
     )
 }

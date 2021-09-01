@@ -1,0 +1,32 @@
+{
+    "components":{
+
+
+        "whereabouts":{
+            "firstParagraph":{
+                "position": "left",
+                "imgSource":"https://via.placeholder.com/1080",
+                "placeholderText": "Escreva algo aqui",
+                "header": "Nice Título aqui",
+                "leg": "lorem ipsum dolor sit amet"
+            },
+            "secondParagraph":{
+                "position": "right",
+                "imgSource":"https://via.placeholder.com/1080",
+                "placeholderText": "Escreva algo aqui",
+                "header": "Nice Título aqui",
+                "leg": "lorem ipsum dolor sit amet"
+            },
+            "thirdParagraph":{
+                "position": "left",
+                "imgSource":"https://via.placeholder.com/1080",
+                "placeholderText": "Escreva algo aqui",
+                "header": "Nice Título aqui",
+                "leg": "lorem ipsum dolor sit amet"
+            }  
+        },
+        "Workin":{
+            
+        }
+    }
+}

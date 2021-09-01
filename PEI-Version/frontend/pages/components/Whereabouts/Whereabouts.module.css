@@ -9,12 +9,22 @@
     color: #fff;
 }
 
-.WAsection img{
-    width: 50%;
+.leftImage{
+    width: 45%;
     margin-right: 5vw;
     border-radius: 20px;
 }
 
+.rightImage{
+    width: 45%;
+    margin-left: 5vw;
+    border-radius: 20px;
+}
+
 .WAsection div{
-    margin-top: 5vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    left: 0;
 }

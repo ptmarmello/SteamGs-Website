@@ -48,7 +48,7 @@ const MainButton = styled.button`
 export default function Forms() {
     return (
     <section className={formStyle.formSection}>
-        <img alt="Alguma imagem boa" src="https://via.placeholder.com/1080"/>
+        {/* <img alt="Alguma imagem boa" src="https://via.placeholder.com/1080"/> */}
         <form className={formStyle.form} onSubmit={(e) => {e.preventDefault()}} >
             <div className={formStyle.formRow}>
                 <label htmlFor="email-input-field"

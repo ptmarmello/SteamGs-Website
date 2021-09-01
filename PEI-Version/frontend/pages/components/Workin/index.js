@@ -1,9 +1,12 @@
 
+import styles from './Workin.module.css';
 
 export default function Workin () { 
     return(
         <>
-            empresas parceiras aqui 
+            <section className={styles.workinSlides}>
+                colocar aqui um slider
+            </section> 
         </>
     )
 }

@@ -8,13 +8,14 @@ import MainSection from './components/MainSection/MainSection';
 import Testimonies from './components/Testimonies';
 import Whereabouts from './components/Whereabouts';
 import Workin from './components/Workin';
-
+import webconfig from './data/webConfig.json';
 
 export default function Home() {
+  let WAConfig = webconfig.components.whereabouts;
   return (
     <div className={styles.container}>
       <Head>
-        <title>Steam Groups</title>
+        <title>Steam Groups | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -22,9 +23,11 @@ export default function Home() {
         <MainSection/>
       </main>
       <Insightsection />
-      <Whereabouts />
-      <Workin />
+      <Whereabouts type={WAConfig.firstParagraph} />
+      <Whereabouts type={WAConfig.secondParagraph} />
+      <Whereabouts type={WAConfig.thirdParagraph} />
       <Advantages />
+      <Workin />
       <Testimonies />
       <Forms/>
 
