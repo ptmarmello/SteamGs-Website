@@ -46,49 +46,51 @@ const MainButton = styled.button`
 `;
 
 export default function Forms() {
-    return (
+
+  function handleSubmit(e){
+    e.preventDefault();
+    // console.log(`Enviando dados de ${e.target[0].value}`);
+    let email = e.target[0].value;
+    // let loadingPlace = document.getElementById('placeToChange');
+
+
+      let formData ={
+        email: email,
+      }
+      localStorage.setItem('compact-form-Data', JSON.stringify(formData));
+
+    // setTimeout(() => {
+    //   loadingPlace.innerHTML = `
+    //     <p style={{color: 'white'}}>
+    //       Enviando...
+    //     </p>
+    //     `;
+    //   setTimeout(() => {
+    //     loadingPlace.innerHTML = ` <div> Enviado! </div> `;
+    //   },1000);
+    // },2000);
+  
+  }
+
+  return (
     <section className={formStyle.formSection}>
         {/* <img alt="Alguma imagem boa" src="https://via.placeholder.com/1080"/> */}
-        <form className={formStyle.form} onSubmit={(e) => {e.preventDefault()}} >
-            <div className={formStyle.formRow}>
+        <form className={formStyle.form} onSubmit={(e) => handleSubmit(e)} >
+            <div className={formStyle.formRow} >
                 <label htmlFor="email-input-field"
-                    className={formStyle.inputLabel}>
-                    <input onChange={(e) => {
-                        console.log(e.target.value)
-                    }}
+                    className={formStyle.inputLabel} >
+                    <input
                         className={formStyle.input}
                         autoComplete="off"
                         type="email"
                         id="email-input-field"
                         placeholder="Enter email to register free"
                         aria-label="Your email address"/>
-                  <MainButton submit>
+                  <MainButton submit type={"submit"}>
                       Enviar
                   </MainButton>
                 </label>
             </div>
-
-
-            {/* <div className={formStyle.formRow}>
-                <label
-                    htmlFor="email-input-field"
-                    className={formStyle.inputLabel}>
-                    <input
-                    className={formStyle.input}
-                    autoComplete="off"
-                    type="email"
-                    id="email-input-field"
-                    onChange={event => {console.log(event.target.value)}}
-                    placeholder="Enter email to register free"
-                    aria-label="Your email address"
-                    required/>
-                </label>
-                <button
-                    type="submit"
-                    className={formStyle.submit}>
-                    Register
-                </button>
-            </div> */}
         </form>
     </section>
   )

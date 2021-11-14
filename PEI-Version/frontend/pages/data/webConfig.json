@@ -1,32 +1,100 @@
 {
     "components":{
-
-
-        "whereabouts":{
-            "firstParagraph":{
-                "position": "left",
-                "imgSource":"https://via.placeholder.com/1080",
-                "placeholderText": "Escreva algo aqui",
-                "header": "Nice Título aqui",
-                "leg": "lorem ipsum dolor sit amet"
+        "home":{
+            "mainsection":{
+                "withNav":{
+                    "onOff":1
+                },
+                "h2":{
+                    "text":"Sua plataforma de experiência profissional"
+                },
+                "p":{
+                    "text":"Embarque nessa jornada até seu emprego dos sonhos!"
+                },
+                "isButton":{
+                    "onOff": 1
+                },
+                "buttonLeft":{
+                    "text":"Vamo que Vamo"
+                },
+                "buttonRight":{
+                    "text":"Saiba mais"
+                }
             },
-            "secondParagraph":{
-                "position": "right",
-                "imgSource":"https://via.placeholder.com/1080",
-                "placeholderText": "Escreva algo aqui",
-                "header": "Nice Título aqui",
-                "leg": "lorem ipsum dolor sit amet"
+            "whereabouts":{
+                "firstParagraph":{
+                    "position": "left",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                },
+                "secondParagraph":{
+                    "position": "right",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                },
+                "thirdParagraph":{
+                    "position": "left",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                }  
             },
-            "thirdParagraph":{
-                "position": "left",
-                "imgSource":"https://via.placeholder.com/1080",
-                "placeholderText": "Escreva algo aqui",
-                "header": "Nice Título aqui",
-                "leg": "lorem ipsum dolor sit amet"
-            }  
+            "Workin":{
+                
+            }
         },
-        "Workin":{
-            
+        "companies":{
+            "mainsection":{
+                "withNav":{
+                    "onOff":0
+                },
+                "h2":{
+                    "text":"This is the home page"
+                },
+                "p":{
+                    "text":"This is the home page"
+                },
+                "isButton":{
+                    "onOff": 1
+                },
+                "buttonLeft":{
+                    "text":"Click me"
+                },
+                "buttonRight":{
+                    "text":"Click me"
+                }
+            },
+            "whereabouts":{
+                "firstParagraph":{
+                    "position": "left",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                },
+                "secondParagraph":{
+                    "position": "right",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                },
+                "thirdParagraph":{
+                    "position": "left",
+                    "imgSource":"https://via.placeholder.com/1080",
+                    "placeholderText": "Escreva algo aqui",
+                    "header": "Nice Título aqui",
+                    "leg": "lorem ipsum dolor sit amet"
+                }  
+            },
+            "Workin":{
+                
+            }
         }
     }
 }

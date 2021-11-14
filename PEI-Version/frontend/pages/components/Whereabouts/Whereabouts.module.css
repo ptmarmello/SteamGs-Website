@@ -2,7 +2,8 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
     justify-content: center;
     align-items: flex-start;
     text-align: left;

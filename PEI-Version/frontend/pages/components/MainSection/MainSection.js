@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import Navbar from '../Navbar';
 import styles from './MainSection.module.css';
-
+import webconfig from '../../data/webConfig.json';
 
 const MainButton = styled.button`
   width: 200px;
@@ -47,22 +47,25 @@ const MainButton = styled.button`
 
 `;
 
-export default function MainSection() {
+export default function MainSection({config}) {
+  
   return (
     <>
-      <Navbar />
+      {config.withNav.onOff===1 && <Navbar/>}
       <section className={styles.mainSection}>
           <div className={styles.sectionDiv}>
             <h1>Os melhores <span>Profissionais</span> começam aqui!</h1>
-            <h2>Sua plataforma de experiência profissional</h2>
-            <p>Embarque nessa jornada até seu emprego dos sonhos!</p>
+            <h2>{config.h2.text}</h2>
+            <p>{config.p.text}</p>
           </div>
-          <div className={styles.sectionContainer}>
-              <div className={styles.sideContainer}>
-                  <MainButton left>Vamo que Vamo</MainButton>
-                  <MainButton right>Saiba mais</MainButton>
-              </div>
-          </div>
+          {config.isButton.onOff===1 && 
+            <div className={styles.sectionContainer}>
+                <div className={styles.sideContainer}>
+                    <MainButton left>{config.buttonLeft.text}</MainButton>
+                    <MainButton right>{config.buttonRight.text}</MainButton>
+                </div>
+            </div>
+          }
       </section>
     </>
   )

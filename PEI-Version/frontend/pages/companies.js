@@ -9,20 +9,20 @@ import Workin from './components/Workin';
 import webconfig from './data/webConfig.json';
 import Link from 'next/link';
 
-export default function Home() {
-  let WAConfig = webconfig.components.home.whereabouts;
+export default function Companies() {
+  let WAConfig = webconfig.components.companies.whereabouts;
   return (
     <div className={styles.container}>
       <Head>
-        <title>Steam Groups | Home</title>
+        <title>Steam Groups | Para Empresas</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <MainSection config={ webconfig.components.home.mainsection }/>
+        <MainSection config={webconfig.components.companies.mainsection} />
       </main>
-      <Insightsection />
 
+      <Insightsection />
         <Whereabouts type={WAConfig.firstParagraph} />
         <Whereabouts type={WAConfig.secondParagraph} />
         <Whereabouts type={WAConfig.thirdParagraph} />
