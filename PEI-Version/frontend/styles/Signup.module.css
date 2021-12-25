@@ -1,0 +1,286 @@
+@media only screen and (max-width: 768px){
+    .register-container{
+        width:100%;
+        max-width: 600px;
+        height: 100vh;
+        margin: 0 auto;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .register-container .contain{
+        width: 100%;
+        padding: 2em;
+        background: #f0f0f5;
+        box-shadow: 0 0 200px rgba(0,0,0,0.3);
+        border-radius: 8px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .register-container .contain section{
+        width: 100%;
+        max-width: 380px;
+    }
+    
+    .register-container .contain section h1{
+        margin: 64px 0 32px;
+        font-size: 32px;
+    }
+    
+    .register-container .contain section p{
+        font: 18px;
+        color: #737380;
+        line-height: 24px;
+        text-align: justify;
+    }
+    .register-container .contain form{
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .register-container .contain form input{
+        margin-top:8px;
+        width: 100%;
+        border-radius: 8px;
+        margin-top:8px;
+        padding: 2vw;
+    }
+
+    
+    /* .register-container .contain form textarea{
+        margin-top:8px;
+    } */
+    
+    /* .register-container .contain form .input-group{
+        display: flex;
+    } */
+
+    /* .register-container .contain form textarea{
+        display: flex;
+    } */
+    
+    /* .register-container .contain form .input-group input + input{
+        margin-left: 8px;
+    } */
+    
+    .aboutme-link{
+        color: #41414d;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 500;
+    
+        transition: opacity 0.2s;
+    }
+    
+    .aboutme-link:hover{
+        opacity: 0.8;
+    }
+    .link{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1119px){
+    .register-container{
+        width:90%;
+        height: 100vh;
+        margin: 0 auto;
+    
+        display: flex;     
+        align-items: center;
+        justify-content: space-between;
+    }
+    .register-container .contain{
+        width: 95%;
+        padding: 2em;
+        background: #f0f0f5;
+        box-shadow: 0 0 100px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .register-container .contain section{
+        width: 100%;
+        max-width: 380px;
+        padding-right: 5px;        
+    }
+    
+    .register-container .contain section h1{
+        margin: 64px 0 32px;
+        font-size: 32px;
+    }
+    
+    .register-container .contain section p{
+        font: 18px;
+        color: #737380;
+        line-height: 24px;
+        text-align: justify;
+    }
+    .register-container .contain form{
+        width:100%;
+        max-width: 450px;
+    }
+    
+    .register-container .contain form input{
+        margin-top:8px;
+        width: 100%;
+        border-radius: 8px;
+        margin-top:8px;
+        padding: 2vw;
+    }
+
+    /* .register-container .contain form textarea{
+        margin-top:8px;
+    } */
+    
+    /* .register-container .contain form .input-group{
+        display: flex;
+    } */
+
+    /* .register-container .contain form textarea{
+        display: flex;
+    } */
+    
+    /* .register-container .contain form .input-group input + input{
+        margin-left: 8px;
+    } */
+    
+    .aboutme-link{
+        color: #41414d;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 500;
+    
+        transition: opacity 0.2s;
+    }
+    
+    .aboutme-link:hover{
+        opacity: 0.8;
+    }
+    .logo{
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (min-width: 1120px){
+    .register-container{
+        width:100%;
+        max-width: 1120px;
+        height: 100vh;
+        margin: 0 auto;
+    
+        display: flex;     
+        align-items: center;
+        justify-content: center;
+    }
+    .register-container .contain{
+        width: 100%;
+        padding: 96px;
+        background: #f0f0f5;
+        box-shadow: 0 0 100px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .register-container .contain section{
+        width: 100%;
+        max-width: 380px;
+    }
+    
+    .register-container .contain section h1{
+        margin: 64px 0 32px;
+        font-size: 32px;
+    }
+    
+    .register-container .contain section p{
+        font: 18px;
+        color: #737380;
+        line-height: 24px;
+        text-align: justify;
+    }
+    .register-container .contain form{
+        width:100%;
+        max-width: 450px;
+    }
+    
+    .register-container .contain form input{
+        width: 100%;
+        border-radius: 8px;
+        margin-top:8px;
+        padding: 2.5vw;
+        font-size: 1em;
+    }
+
+    /* .register-container .contain form textarea{
+        margin-top:8px;
+    } */
+    
+    /* .register-container .contain form .input-group{
+        display: flex;
+    } */
+
+    /* .register-container .contain form textarea{
+        display: flex;
+    } */
+    
+    /* .register-container .contain form .input-group input + input{
+        margin-left: 8px;
+    } */
+    
+    .aboutme-link{
+        color: #41414d;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 500;
+    
+        transition: opacity 0.2s;
+    }
+    
+    .aboutme-link:hover{
+        opacity: 0.8;
+    }
+
+}
+
+.sign-Button{
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.sign-Button button{
+    margin: auto;
+    cursor: pointer;
+}
+
+.icons{
+    font-size: 2vw;
+}
+
+.signupButton{
+    /* background: #41414d; */
+    background-color: #5658DD;
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+    cursor: pointer;
+}

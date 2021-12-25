@@ -7,7 +7,7 @@ import MainSection from './components/MainSection/MainSection';
 import Whereabouts from './components/Whereabouts';
 import Workin from './components/Workin';
 import webconfig from './data/webConfig.json';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export default function Home() {
   let WAConfig = webconfig.components.home.whereabouts;
