@@ -6,9 +6,23 @@ import styles from '../styles/Signup.module.css';
 
 function signup(props) {
 
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [confirmPassword, setConfirmPassword] = React.useState('');
+
     async function handleSubmit(e){
         e.preventDefault();
-        alert('Sorry bro');
+        if(password !== confirmPassword){
+            alert("Passwords do not match!");
+        }
+
+        
+    }
+
+    function handlePasswordChange(e){
+        if(confirmPassword !== password){
+            console.log('passwords do not match');
+        }
     }
 
     return (        
@@ -25,41 +39,42 @@ function signup(props) {
                         {/* <Link className="aboutme-link" to="/">Veja aqui!</Link> */}
                     </p>
                 </section>
-                <form onSubmit={props.handleSubmit}>
-                    
-                        {/* <label>Email:</label> */}
+                <form onSubmit={() => {handleSubmit()}}>
                         <input
                             type="text"
                             name="email"
                             placeholder="Seu email"
-                            onChange={props.handleChange}
+                            onChange={
+                                (e) => {
+                                    setEmail(e.target.value);
+                                }
+                            }
                         />
-                    
-                    
-                        {/* <label>Password:</label> */}
                         <input
                             type="password"
                             name="password"
                             placeholder="Sua senha"
-                            onChange={props.handleChange}
+                            onChange={
+                                (e) => {
+                                    setPassword(e.target.value);
+                                }
+
+                            }
                         />
-                    
-                    
-                        {/* <label>Confirm Password:</label> */}
                         <input
                             type="password"
                             name="password_confirmation"
                             placeholder="Confirme sua senha"
-                            onChange={props.handleChange}
+                            onChange={
+                                (e) => {
+                                    setConfirmPassword(e.target.value);
+                                    // handlePasswordChange(e.target.value);
+                                }
+                            }
                         />
-                    
-                    
                     <section style={{display:'flex', paddingRight:'0'}}>
-                        {/* <div>
-                            or signup with:
-                        </div> */}
                         <div className={ styles['sign-Button'] }>
-                            <button className={styles.signupButton}>
+                            <button className={styles.signupButton} type='submit' >
                                 Signup
                             </button>
                             <button>

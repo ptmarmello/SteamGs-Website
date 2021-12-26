@@ -95,6 +95,39 @@
             "Workin":{
                 
             }
+        },
+        "signForm":{
+            "form":{
+                "name":{
+                    "placeholder":"Nome",
+                    "type":"text"
+                },
+                "email":{
+                    "placeholder":"Email",
+                    "type":"email"
+                },
+                "password":{
+                    "placeholder":"Senha",
+                    "type":"password"
+                },
+                "passwordConfirm":{
+                    "placeholder":"Confirmar Senha",
+                    "type":"password"
+                },
+                "submit":{
+                    "text":"Cadastrar"
+                },
+                "courses":[
+                    "Engenharia Elétrica",
+                    "Engenharia de Software",
+                    "Engenharia da Computação",
+                    "Engenharia de Produção",
+                    "Engenharia de Controle e Automação"
+                ],
+                "linguagens":[
+
+                ]
+            }
         }
     }
 }
