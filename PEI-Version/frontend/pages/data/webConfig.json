@@ -96,6 +96,12 @@
                 
             }
         },
+        "login":{
+            "paragraph":[
+                "Nice frase aqui",
+                "  outra Nice frase aqui"
+            ]
+        },
         "signForm":{
             "form":{
                 "name":{

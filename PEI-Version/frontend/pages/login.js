@@ -4,6 +4,7 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { GoMarkGithub } from "react-icons/go";
 
 import styles from '../styles/Signup.module.css';
+import data from './data/webConfig.json';
 
 function LoginPage(props) {
 
@@ -22,12 +23,8 @@ function LoginPage(props) {
         <div className={styles['register-container']}>
             <div className={styles['contain']}>
                 <section>
-                {/* <button className={styles['signupButton']}>
-                    Retornar
-                </button> */}
-                    {/* <img src="#" className="logo" alt="Welcome. We've been expecting you"/> */}
                     <h1>Login</h1>
-                    <p> Algum texto mega motivacional aqui</p>
+                    <p>{data.components.login.paragraph}</p>
                 </section>
                 <form onSubmit={ handleSubmit() }>
                     <input placeholder='Seu email' {...register("example", { required: true } )} type="email" />

@@ -1,8 +1,7 @@
 // import styled, { css } from 'styled-components';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
-import login from '../../login';
-import signup from '../../signup';
+
 
 
 export default function Navbar(){
