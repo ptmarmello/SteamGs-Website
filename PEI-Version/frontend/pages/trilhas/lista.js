@@ -8,16 +8,28 @@ import Link from 'next/link';
 function Lista({posts}) {
     return (
         <div className="container">
-            <main>
-            {posts.map((post, id) => (
+          <nav>
+            vai ter um Navbar aqui
+          </nav>
+          <main>
+            {/* {posts.map((post, id) => (
               <div key={id} >
                 {post.frontMatter.title}
                 <Link href={`/trilhas/` + post.frontMatter.slug}>{post.frontMatter.slug}</Link>
               </div>
-            ))}
-    
+            ))} */}
+            
           </main>
-        </div>
+          <div>
+            Não sabe por onde começar? Faça nosso teste
+            <span>
+              lala
+            </span>
+          </div>
+          <section>
+            
+          </section>
+      </div>
     );
 }
 
