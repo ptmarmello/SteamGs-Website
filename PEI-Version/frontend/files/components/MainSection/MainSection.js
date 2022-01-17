@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import Navbar from '../Navbar';
 import styles from './MainSection.module.css';
 // import { Link } from 'next/link';
-
 // import webconfig from '../../../pages/data/webConfig.json';
 
 const MainButton = styled.button`
@@ -50,7 +49,7 @@ const MainButton = styled.button`
 `;
 
 export default function MainSection({config}) {
-  
+
   return (
     <>
       {config.withNav.onOff===1 && <Navbar/>}
@@ -63,7 +62,9 @@ export default function MainSection({config}) {
           {config.isButton.onOff===1 && 
             <div className={styles.sectionContainer}>
                 <div className={styles.sideContainer}>
-                    <MainButton left>{config.buttonLeft.text}</MainButton>
+                    <MainButton left>
+                      {config.buttonLeft.text}
+                    </MainButton>
                     <MainButton right>{config.buttonRight.text}</MainButton>
                 </div>
             </div>

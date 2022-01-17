@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineGoogle } from "react-icons/ai";
 import { GoMarkGithub } from "react-icons/go";
+import { supabase } from "../utils/supabaseClient";
 
 import styles from '../styles/Signup.module.css';
 
@@ -9,20 +10,24 @@ function signup(props) {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
-
+    
     async function handleSubmit(e){
         e.preventDefault();
         if(password !== confirmPassword){
             alert("Passwords do not match!");
-        }
-
-        
+        }    
     }
 
     function handlePasswordChange(e){
         if(confirmPassword !== password){
             console.log('passwords do not match');
         }
+    }
+
+    async function signInWithGithub() {
+        const { user, session, error } = await supabase.auth.signUp({
+          provider: 'github',
+        })
     }
 
     return (        
@@ -80,7 +85,7 @@ function signup(props) {
                             <button>
                                 <AiOutlineGoogle className={styles.icons} />
                             </button>
-                            <button>
+                            <button onClick={ () => { signInWithGithub() } }>
                                 <GoMarkGithub className={styles.icons} />
                             </button>
                                 

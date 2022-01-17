@@ -135,5 +135,36 @@
                 ]
             }
         }
-    }
+    },
+    "trails":[
+        {
+            "slug":"templateTrilhas",
+            "imgSource":"https://via.placeholder.com/128",
+            "imgAlt":"Imagem de um curso",
+            "title":"Título da trilha",
+            "description":"Descrição da trilha",
+            "motivation":"Motivação da trilha",
+            "items":[
+                "Item 1",
+                "Item 2",
+                "Item 3",
+                "Item 4",
+                "Item 5"
+            ]
+        },
+        {
+                "imgSource":"https://via.placeholder.com/128",
+                "imgAlt":"Imagem de um curso",
+                "title":"Título da trilha",
+                "description":"Descrição da trilha",
+                "motivation":"Motivação da trilha",
+                "items":[
+                    "Item 1",
+                    "Item 2",
+                    "Item 3",
+                    "Item 4",
+                    "Item 5"
+                ]
+        }
+    ]
 }
