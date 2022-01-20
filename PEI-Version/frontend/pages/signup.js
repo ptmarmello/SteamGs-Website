@@ -1,7 +1,8 @@
-import React from 'react';
-import { AiOutlineGoogle } from "react-icons/ai";
+import React, { useCallback, useEffect, useState } from 'react';
+// import { AiOutlineGoogle } from "react-icons/ai";
 import { GoMarkGithub } from "react-icons/go";
 import { supabase } from "../utils/supabaseClient";
+import { useRouter } from 'next/router';
 
 import styles from '../styles/Signup.module.css';
 
@@ -10,6 +11,9 @@ function signup(props) {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
+    const [loading, setLoading] = useState(true);
+    const [updating, setUpdating] = useState(false);
+
     
     async function handleSubmit(e){
         e.preventDefault();
@@ -24,74 +28,75 @@ function signup(props) {
         }
     }
 
-    async function signInWithGithub() {
-        const { user, session, error } = await supabase.auth.signUp({
-          provider: 'github',
-        })
+    async function signInWithGithub() {    
+        try {
+            setLoading(true);
+            const { error } = await supabase.auth.signIn({
+            provider: 'github',
+            });
+            if (error) throw error;
+        } catch (error) {
+            alert(error.error_description || error.message);
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (        
         <div className={styles['register-container']}>
             <div className={styles['contain']}>
                 <section>
-                {/* <button className={styles['signupButton']}>
-                    Retornar
-                </button> */}
-                    {/* <img src="#" className="logo" alt="Welcome. We've been expecting you"/> */}
                     <h1>Cadastro</h1>
                     <p>Estamos procurando pessoas que se envolvam, sejam dedicadas e tenham o espírito de mudança assim como a gente!
                         Se deseja saber mais sobre nossa visão e sobre nosso espírito de mudança: 
-                        {/* <Link className="aboutme-link" to="/">Veja aqui!</Link> */}
                     </p>
                 </section>
-                <form onSubmit={() => {handleSubmit()}}>
-                        <input
-                            type="text"
-                            name="email"
-                            placeholder="Seu email"
-                            onChange={
-                                (e) => {
-                                    setEmail(e.target.value);
+                <section>
+                    <form>
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="Seu email"
+                                onChange={
+                                    (e) => {
+                                        setEmail(e.target.value);
+                                    }
                                 }
-                            }
-                        />
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Sua senha"
-                            onChange={
-                                (e) => {
-                                    setPassword(e.target.value);
-                                }
+                            />
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Sua senha"
+                                onChange={
+                                    (e) => {
+                                        setPassword(e.target.value);
+                                    }
 
-                            }
-                        />
-                        <input
-                            type="password"
-                            name="password_confirmation"
-                            placeholder="Confirme sua senha"
-                            onChange={
-                                (e) => {
-                                    setConfirmPassword(e.target.value);
-                                    // handlePasswordChange(e.target.value);
                                 }
-                            }
-                        />
-                    <section style={{display:'flex', paddingRight:'0'}}>
-                        <div className={ styles['sign-Button'] }>
-                            <button className={styles.signupButton} type='submit' >
-                                Signup
-                            </button>
-                            <button>
-                                <AiOutlineGoogle className={styles.icons} />
-                            </button>
-                            <button onClick={ () => { signInWithGithub() } }>
-                                <GoMarkGithub className={styles.icons} />
-                            </button>
-                                
-                        </div>
-                    </section>
-                </form>
+                            />
+                            <input
+                                type="password"
+                                name="password_confirmation"
+                                placeholder="Confirme sua senha"
+                                onChange={
+                                    (e) => {
+                                        setConfirmPassword(e.target.value);
+                                        // handlePasswordChange(e.target.value);
+                                    }
+                                }
+                            />
+                    </form>
+                        <section style={{display:'flex', paddingRight:'0'}}>
+                            <div className={ styles['sign-Button'] }>
+                                <button className={styles.signupButton} type='submit' >
+                                    Signup
+                                </button>   
+                                <button onClick={ () => { signInWithGithub() } }>
+                                    <GoMarkGithub className={styles.icons} />
+                                </button>
+                            </div>
+                        </section>
+                </section>
             </div>
         </div>
     );
