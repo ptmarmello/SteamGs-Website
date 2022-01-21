@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { GoMarkGithub } from "react-icons/go";
 import { supabase } from "../utils/supabaseClient";
 import { useRouter } from 'next/router';
+import Head from 'next/head'
 
 import styles from '../styles/Signup.module.css';
 
@@ -44,6 +45,10 @@ function signup(props) {
 
     return (        
         <div className={styles['register-container']}>
+            <Head>
+                <title>Steam Groups | Signup</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div className={styles['contain']}>
                 <section>
                     <h1>Cadastro</h1>

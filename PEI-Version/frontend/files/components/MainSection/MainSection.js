@@ -52,7 +52,7 @@ export default function MainSection({config}) {
 
   return (
     <>
-      {config.withNav.onOff===1 && <Navbar/>}
+      {/* {config.withNav.onOff===1 && <Navbar/>} */}
       <section className={styles.mainSection}>
           <div className={styles.sectionDiv}>
             <h1>Os melhores <span>Profissionais</span> começam aqui!</h1>
