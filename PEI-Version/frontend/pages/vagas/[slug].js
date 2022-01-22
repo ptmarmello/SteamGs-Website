@@ -2,7 +2,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Vagas from './index';
+import Vagas from '../../files/templates/VagasTemplate.js';
 // import SyntaxHighlighter from 'react-syntax-highlighter'
 
 export const getStaticPaths = async () => {
