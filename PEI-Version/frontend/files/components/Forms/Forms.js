@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import formStyle from './Form.module.css';
-
+import { supabase } from "../../../utils/supabaseClient";
+import { useState } from 'react';
 const MainButton = styled.button`
   width: 200px;
   height: 56px;
@@ -45,53 +46,73 @@ const MainButton = styled.button`
 
 `;
 
-export default function Forms() {
+export default function Forms(){
 
-  function handleSubmit(e){
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [agreed, setAgreed] = useState(false);
+
+  async function handleSubmit(e){
     e.preventDefault();
-    // console.log(`Enviando dados de ${e.target[0].value}`);
-    let email = e.target[0].value;
+    if(name === '' || email === ''){
+      alert("Por Favor complete os campos corretamente!");
+      return;
+    }
+    // const name = "Amanda Testes";
+    // const email = e.target[0].value;
     // let loadingPlace = document.getElementById('placeToChange');
-
-
-      let formData ={
-        email: email,
+    // let formData ={
+    //   email: email,
+    // }
+    // localStorage.setItem('compact-form-Data', JSON.stringify(formData));
+    
+      if (email.length < 10){
+        alert("E-mail não é válido");
+        return;
       }
-      localStorage.setItem('compact-form-Data', JSON.stringify(formData));
-
-    // setTimeout(() => {
-    //   loadingPlace.innerHTML = `
-    //     <p style={{color: 'white'}}>
-    //       Enviando...
-    //     </p>
-    //     `;
-    //   setTimeout(() => {
-    //     loadingPlace.innerHTML = ` <div> Enviado! </div> `;
-    //   },1000);
-    // },2000);
-  
-  }
+      const { error } = await supabase
+        .from("pre-register")
+        .insert([{ name, email, agreed: true }]);
+      if (error) {
+        console.log(error.message);
+        alert("Erro ao enviar formulário");
+      } else {
+        alert("Cadastro realizado com sucesso!");
+      }
+    };
 
   return (
     <section className={formStyle.formSection}>
         {/* <img alt="Alguma imagem boa" src="https://via.placeholder.com/1080"/> */}
-        <form className={formStyle.form} onSubmit={(e) => handleSubmit(e)} >
-            <div className={formStyle.formRow} >
-                <label htmlFor="email-input-field"
-                    className={formStyle.inputLabel} >
-                    <input
-                        className={formStyle.input}
-                        autoComplete="off"
-                        type="email"
-                        id="email-input-field"
-                        placeholder="Enter email to register free"
-                        aria-label="Your email address"/>
-                  <MainButton submit type={"submit"}>
-                      Enviar
-                  </MainButton>
-                </label>
-            </div>
-        </form>
+      <form className={formStyle.form} onSubmit={(e) => handleSubmit(e)} >
+        <div className={formStyle.formRow} >
+          <label htmlFor="name-input-field" className={formStyle.inputLabel} >
+            <input
+              className={formStyle.input}
+              autoComplete="on"
+              type="text"
+              id="name-input-field"
+              placeholder="Seu nome"
+              aria-label="Your Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+          <label htmlFor="email-input-field" className={formStyle.inputLabel} >
+            <input
+              className={formStyle.input}
+              autoComplete="on"
+              type="email"
+              id="email-input-field"
+              placeholder="Se registre com seu email"
+              aria-label="Your email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <MainButton submit type={"submit"}>
+                Enviar
+            </MainButton>
+          </label>
+        </div>
+      </form>
     </section>
   )
 }
