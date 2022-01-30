@@ -58,28 +58,25 @@ export default function Forms(){
       alert("Por Favor complete os campos corretamente!");
       return;
     }
-    // const name = "Amanda Testes";
-    // const email = e.target[0].value;
-    // let loadingPlace = document.getElementById('placeToChange');
-    // let formData ={
-    //   email: email,
-    // }
-    // localStorage.setItem('compact-form-Data', JSON.stringify(formData));
+    if(!agreed){
+      alert("Por Favor aceite os termos de uso!");
+      return;
+    }
     
-      if (email.length < 10){
-        alert("E-mail não é válido");
-        return;
-      }
-      const { error } = await supabase
-        .from("pre-register")
-        .insert([{ name, email, agreed: true }]);
-      if (error) {
-        console.log(error.message);
-        alert("Erro ao enviar formulário");
-      } else {
-        alert("Cadastro realizado com sucesso!");
-      }
-    };
+    if (email.length < 10){
+      alert("E-mail não é válido");
+      return;
+    }
+    const { error } = await supabase
+      .from("pre-register")
+      .insert([{ name, email, agreed: true }]);
+    if (error) {
+      console.log(error.message);
+      alert("Erro ao enviar formulário");
+    } else {
+      alert("Cadastro realizado com sucesso!");
+    }
+  };
 
   return (
     <section className={formStyle.formSection}>
