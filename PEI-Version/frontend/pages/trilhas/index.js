@@ -7,6 +7,7 @@ import Link from 'next/link';
 import styles from './Lista.module.css';
 
 import data from '../data/webConfig.json';
+import { Button, Card, CardContent } from '@mui/material';
 
 function Lista() {
     return (
@@ -23,28 +24,37 @@ function Lista() {
                 data.trails.map((trail, index) => {
                   return(
                     <div className={styles.listaCard} key={index}>
-                      <div className={styles.listaCardDiv}>
-                        <img src={trail.imgSource} alt={trail.imgAlt} />
-                        <div className={styles.listaCardHeaderDiv}>
-                          <h2>{trail.title}</h2>
-                          <p>{trail.description}</p>
-                          <p>{trail.motivation}</p>
-                          <div>
-                            <ul>
-                              {trail.items.map((item, index) => {
-                                return(
-                                  <li key={index}>{item}</li>
-                                )
-                              })}
-                            </ul>
+                        <Card key={index}
+                          sx={{backgroundColor: '#ccd1', borderRadius: '10px', width: '80%', margin: '0 auto'}}
+                        >
+                          <CardContent>
+
+                        <div className={styles.listaCardDiv}>
+                          <img src={trail.imgSource} alt={trail.imgAlt} />
+                          <div className={styles.listaCardHeaderDiv}>
+                            <h2>{trail.title}</h2>
+                            <p>{trail.description}</p>
+                            <p>{trail.motivation}</p>
+                            <div>
+                              <ul>
+                                {trail.items.map((item, index) => {
+                                  return(
+                                    <li key={index}>{item}</li>
+                                    )
+                                  })}
+                              </ul>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div>
-                        <Link href={`/trilhas/${trail.slug}`}>
-                          Acessar Trilha
-                        </Link>
-                      </div>
+                        <div>
+                          <Button>
+                            <Link href={`/trilhas/${encodeURIComponent(trail.slug)}`}>
+                              Acessar Trilha
+                            </Link>
+                          </Button>
+                        </div>
+                        </CardContent>
+                      </Card>
                     </div>
                   )
                 })

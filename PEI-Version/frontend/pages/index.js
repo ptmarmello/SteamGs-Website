@@ -7,10 +7,13 @@ import MainSection from '../files/components/MainSection/MainSection';
 import Whereabouts from '../files/components/Whereabouts';
 import Workin from '../files/components/Workin';
 import webconfig from './data/webConfig.json';
+
+import Divider from '@mui/material/Divider'
 // import Link from 'next/link';
 
 export default function Home() {
   let WAConfig = webconfig.components.home.whereabouts;
+  let advConfig = webconfig.components.home.advantages;
   return (
     <div className={styles.container}>
       <Head>
@@ -20,21 +23,21 @@ export default function Home() {
       <main className={styles.main}>
         <MainSection config={ webconfig.components.home.mainsection }/>
       </main>
-      <Insightsection />
-
+      <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
+        <Insightsection />
+      <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
         <Whereabouts type={WAConfig.firstParagraph} />
         <Whereabouts type={WAConfig.secondParagraph} />
         <Whereabouts type={WAConfig.thirdParagraph} />
-      
-      <Advantages />
-
-      <Workin />
-      
-      <Forms/>
-
-      <footer className={styles.footer}>
+      <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
+        <Advantages data={advConfig} />
+      {/* <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
+        <Workin /> */}
+      <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
+        <Forms/>
+      {/* <footer className={styles.footer}>
         footer
-      </footer>
+      </footer> */}
     </div>
   )
 }

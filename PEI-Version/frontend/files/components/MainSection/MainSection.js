@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components';
-import Navbar from '../Navbar';
+// import Navbar from '../Navbar';
 import styles from './MainSection.module.css';
+// import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 // import { Link } from 'next/link';
 // import webconfig from '../../../pages/data/webConfig.json';
 
@@ -47,6 +50,8 @@ const MainButton = styled.button`
   `}
 
 `;
+
+
 
 export default function MainSection({config}) {
 

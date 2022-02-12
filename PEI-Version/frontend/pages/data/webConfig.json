@@ -24,25 +24,65 @@
             "whereabouts":{
                 "firstParagraph":{
                     "position": "left",
-                    "imgSource":"https://via.placeholder.com/1080",
+                    "imgSource":"/images/Working.jpg",
                     "placeholderText": "Escreva algo aqui",
                     "header": "Nice Título aqui",
                     "leg": "lorem ipsum dolor sit amet"
                 },
                 "secondParagraph":{
                     "position": "right",
-                    "imgSource":"https://via.placeholder.com/1080",
+                    "imgSource":"/images/rocketblue.jpg",
                     "placeholderText": "Escreva algo aqui",
                     "header": "Nice Título aqui",
                     "leg": "lorem ipsum dolor sit amet"
                 },
                 "thirdParagraph":{
                     "position": "left",
-                    "imgSource":"https://via.placeholder.com/1080",
+                    "imgSource":"/images/presentation.jpg",
                     "placeholderText": "Escreva algo aqui",
                     "header": "Nice Título aqui",
                     "leg": "lorem ipsum dolor sit amet"
                 }  
+            },
+            "advantages":{
+                "advImages":[
+                    {
+                        "imgSource":"/images/number0.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "imgSource":"/images/number1.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "imgSource":"/images/number.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "imgSource":"/images/number-2.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "imgSource":"/images/number-3.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    },
+                    {
+                        "imgSource":"/images/number-4.png",
+                        "leg": "lorem ipsum dolor sit amet",
+                        "header": "Nice Título aqui",
+                        "text": "lorem ipsum dolor sit amet"
+                    }
+                ]
             },
             "Workin":{
                 
