@@ -7,7 +7,7 @@ import Link from 'next/link';
 import styles from './Lista.module.css';
 
 import data from '../data/webConfig.json';
-import { Button, Card, CardContent } from '@mui/material';
+import { Button, Card, CardContent, CardActions, Divider, Paper } from '@mui/material';
 
 function Lista() {
     return (
@@ -18,19 +18,25 @@ function Lista() {
           <main className={styles['mainDiv']}>
             <div className={styles.divHeader}>
               <h1 className={styles.headerText}>Trilhas</h1>
+              <Divider sx={{width: '80%', margin:'0 auto', marginBottom: '1rem'}}
+               color='grey' variant='middle' />
             </div>
             <section className={styles.mainSection}>
               {
                 data.trails.map((trail, index) => {
                   return(
                     <div className={styles.listaCard} key={index}>
-                        <Card key={index}
-                          sx={{backgroundColor: '#ccd1', borderRadius: '10px', width: '80%', margin: '0 auto'}}
-                        >
-                          <CardContent>
 
+                      <Link href={`/trilhas/${encodeURIComponent(trail.slug)}`}
+                        as={`/trilhas/${encodeURIComponent(trail.slug)}`}
+                      >
+                        <Card key={index}
+                          sx={{backgroundColor: '#ccd1', color: '#000', borderRadius: '10px', width: '80%', margin: '0 auto', marginBottom: '20px',
+                          cursor: 'pointer', '&:hover': {backgroundColor: '#fff9', color: 'black'}, transition: 'background-color 0.4s ease-in-out'
+                        }}>
+                          <CardContent>
                         <div className={styles.listaCardDiv}>
-                          <img src={trail.imgSource} alt={trail.imgAlt} />
+                            <img src={trail.imgSource} alt={trail.imgAlt} />
                           <div className={styles.listaCardHeaderDiv}>
                             <h2>{trail.title}</h2>
                             <p>{trail.description}</p>
@@ -46,15 +52,9 @@ function Lista() {
                             </div>
                           </div>
                         </div>
-                        <div>
-                          <Button>
-                            <Link href={`/trilhas/${encodeURIComponent(trail.slug)}`}>
-                              Acessar Trilha
-                            </Link>
-                          </Button>
-                        </div>
                         </CardContent>
                       </Card>
+                      </Link>
                     </div>
                   )
                 })
@@ -62,13 +62,18 @@ function Lista() {
               }
             </section>
           </main>
-          <div>
-            Não sabe por onde começar? Faça nosso teste
-            <span>
-              lala
-            </span>
-            <button>Entre aqui</button>
-          </div>
+          <Card 
+            sx={{width: '90%', margin:'0 auto'}}
+            color='#fff669'
+            >
+              <CardContent>
+                Não sabe por onde começar? Faça nosso teste
+                <Button>Entre aqui</Button>
+              </CardContent>
+            {/* <span>
+               arrow
+            </span> */}
+          </Card>
           <section>
             
           </section>

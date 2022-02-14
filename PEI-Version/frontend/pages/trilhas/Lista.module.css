@@ -123,11 +123,40 @@
         color: white;
     }
     .mainDiv{
-        width: 100%;
+        width: 95%;
         height: 100%;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+    }
+    .divHeader{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .listaCardDiv{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .listaCardDiv img{
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
+    }
+    .listaCardHeaderDiv{
+        margin:auto auto;
+        margin-left: 20px;
+    }
+    .listaCardHeaderDiv div ul{
+        display: flex;
+        justify-content: flex-start;
+        list-style-type: none;
     }
 
 }   

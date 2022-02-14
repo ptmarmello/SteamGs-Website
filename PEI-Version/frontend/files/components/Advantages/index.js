@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 export default function Advantages (props) { 
     let data = props.data;
-    const theLoader = ({src}) => {
+    const theLoader = ({src, width, height}) => {
+        // console.log(width, height);
         return `${src}`;
       }
     return(
@@ -15,10 +16,16 @@ export default function Advantages (props) {
                         {data.advImages.map((item, index) => {
                             return(
                                 <div key={index}>
-                                    <Image src={item.imgSource} alt={item.leg}
-                                            width="50%" height="50%"
-                                            quality={100} loader={theLoader}
-                                        />
+                                    <div style={{
+                                        width: '100%',
+                                        maxWidth: '120px',
+                                    }}>
+                                        <Image src={item.imgSource} alt={item.leg}
+                                                width="40%" height="40%"
+                                                quality={100} loader={theLoader}
+                                                unoptimized={true}
+                                            />
+                                    </div>
                                     <h3>{item.header}
                                         <br/>
                                         oloco   

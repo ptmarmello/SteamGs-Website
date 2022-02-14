@@ -20,9 +20,12 @@ export default function Home() {
         <title>Steam Groups | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
+        {/* <Particles /> */}
         <MainSection config={ webconfig.components.home.mainsection }/>
       </main>
+
       <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>
         <Insightsection />
       <Divider sx={{ maxWidth: '75%', margin: '0 auto' }} color='grey' variant='middle'/>

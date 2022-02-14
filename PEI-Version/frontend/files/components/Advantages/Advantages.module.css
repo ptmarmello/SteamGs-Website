@@ -36,8 +36,6 @@
 }
 
 .AdGrid div{
-    /* width: 100%; */
-    /* height: 100%; */
     max-width: fit-content;
     /* max-height: 260px; */
     /* background-color: rgb(243, 243, 243); */
@@ -49,12 +47,11 @@
 }
 
 .AdGrid div *{
-    /* max-width: 60%; */
     margin: 0 auto;
 }
 
 .AdGrid div img{
-    border-radius: 24px;
+    border-radius: 50%;
 }
 
 .AdGrid div p {
