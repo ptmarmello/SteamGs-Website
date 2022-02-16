@@ -179,9 +179,9 @@
     "trails":[
         {
             "slug":"templateTrilhas",
-            "imgSource":"https://via.placeholder.com/128",
+            "imgSource":"/images/idea.jpg",
             "imgAlt":"Imagem de um curso",
-            "title":"Título da trilha",
+            "title":"Trilha de Frontend",
             "description":"Descrição da trilha",
             "motivation":"Motivação da trilha",
             "items":[
@@ -193,9 +193,9 @@
             ]
         },
         {
-                "imgSource":"https://via.placeholder.com/128",
+                "imgSource":"/images/rocketblue.jpg",
                 "imgAlt":"Imagem de um curso",
-                "title":"Título da trilha",
+                "title":"Trilha de Backend",
                 "description":"Descrição da trilha",
                 "motivation":"Motivação da trilha",
                 "items":[

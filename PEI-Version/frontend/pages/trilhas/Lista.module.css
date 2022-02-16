@@ -143,10 +143,11 @@
     .listaCardDiv{
         display: flex;
         justify-content: flex-start;
+        flex: 1 1;
     }
     .listaCardDiv img{
         width: 10%;
-        height: 10%;
+        height: auto;
         border-radius: 50%;
     }
     .listaCardHeaderDiv{

@@ -4,7 +4,7 @@ import styles from './MainSection.module.css';
 // import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-// import { Link } from 'next/link';
+import Link from 'next/link';
 // import webconfig from '../../../pages/data/webConfig.json';
 
 const MainButton = styled.button`
@@ -68,9 +68,15 @@ export default function MainSection({config}) {
             <div className={styles.sectionContainer}>
                 <div className={styles.sideContainer}>
                     <MainButton left>
-                      {config.buttonLeft.text}
+                      <Link href={`/signup/`}>
+                        {config.buttonLeft.text}
+                      </Link>
                     </MainButton>
-                    <MainButton right>{config.buttonRight.text}</MainButton>
+                    <MainButton right>
+                      <Link href={`/about/`}>
+                        {config.buttonRight.text}
+                      </Link>
+                    </MainButton>
                 </div>
             </div>
           }

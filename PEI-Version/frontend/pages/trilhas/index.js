@@ -62,7 +62,7 @@ function Lista() {
               }
             </section>
           </main>
-          <Card 
+          {/* <Card 
             sx={{width: '90%', margin:'0 auto'}}
             color='#fff669'
             >
@@ -70,13 +70,11 @@ function Lista() {
                 Não sabe por onde começar? Faça nosso teste
                 <Button>Entre aqui</Button>
               </CardContent>
-            {/* <span>
-               arrow
-            </span> */}
-          </Card>
-          <section>
             
-          </section>
+          </Card> */}
+          <footer>
+            footer  
+          </footer>
       </div>
     );
 }
