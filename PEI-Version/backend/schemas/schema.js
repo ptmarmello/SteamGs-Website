@@ -9,6 +9,8 @@ import projetos from './projetos'
 import socialMedia from './socialMedia'
 import solvedChallenges from './solvedChallenges'
 import projetosResolvidos from './projetosResolvidos'
+import trails from './trails'
+import etapas from './etapas'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,6 +25,8 @@ export default createSchema({
     projetos,
     socialMedia,
     solvedChallenges,
-    projetosResolvidos
+    projetosResolvidos,
+    trails,
+    etapas
   ]),
 })
