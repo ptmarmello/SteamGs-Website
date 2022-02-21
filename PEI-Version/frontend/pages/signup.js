@@ -1,8 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 // import { AiOutlineGoogle } from "react-icons/ai";
-import { GoMarkGithub } from "react-icons/go";
+import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import { supabase } from "../utils/supabaseClient";
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
+import { Button } from '@mui/material';
+import Link from 'next/link';
 import Head from 'next/head'
 
 import styles from '../styles/Signup.module.css';
@@ -13,21 +15,21 @@ function signup(props) {
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [loading, setLoading] = useState(true);
-    const [updating, setUpdating] = useState(false);
+    // const [updating, setUpdating] = useState(false);
 
     
-    async function handleSubmit(e){
-        e.preventDefault();
-        if(password !== confirmPassword){
-            alert("Passwords do not match!");
-        }    
-    }
+    // async function handleSubmit(e){
+    //     e.preventDefault();
+    //     if(password !== confirmPassword){
+    //         alert("Passwords do not match!");
+    //     }    
+    // }
 
-    function handlePasswordChange(e){
-        if(confirmPassword !== password){
-            console.log('passwords do not match');
-        }
-    }
+    // function handlePasswordChange(e){
+    //     if(confirmPassword !== password){
+    //         console.log('passwords do not match');
+    //     }
+    // }
 
     async function signInWithGithub() {    
         try {
@@ -91,6 +93,14 @@ function signup(props) {
                                 }
                             />
                     </form>
+                        <>
+                            <Link href='/login'>
+                                <Button>
+                                    Já possuo uma conta
+                                        <GoArrowRight />
+                                </Button>
+                            </Link>
+                        </>
                         <section style={{display:'flex', paddingRight:'0'}}>
                             <div className={ styles['sign-Button'] }>
                                 <button className={styles.signupButton} type='submit' >

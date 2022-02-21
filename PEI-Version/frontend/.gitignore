@@ -25,7 +25,12 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+<<<<<<< HEAD
 # .env.local
+=======
+.env
+.env.local
+>>>>>>> dev
 .env.development.local
 .env.test.local
 .env.production.local

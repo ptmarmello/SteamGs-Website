@@ -1,42 +1,40 @@
+import React from 'react';
 import styles from './Advantages.module.css';
+import Image from 'next/image';
 
-export default function Advantages () { 
+export default function Advantages (props) { 
+    let data = props.data;
+    const theLoader = ({src}) => {
+        // console.log(width, height);
+        return `${src}`;
+      }
     return(
         <>
             <section className={styles.AdSection}>
                 <section>
                     <h1>Vantagens</h1>
                     <section className={styles.AdGrid}>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem1</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem2</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem3</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem4</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem5</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div>
-                            <img alt="lala" src="https://via.placeholder.com/1080" />
-                            <h3>Vantagem6</h3>
-                            <p>lorem ipsum dolor sit amet</p>
-                        </div>
+                        {data.advImages.map((item, index) => {
+                            return(
+                                <div key={index}>
+                                    <div style={{
+                                        width: '100%',
+                                        maxWidth: '120px',
+                                    }}>
+                                        <Image src={item.imgSource} alt={item.leg}
+                                                width="40%" height="40%"
+                                                quality={100} loader={theLoader}
+                                                unoptimized={true}
+                                            />
+                                    </div>
+                                    <h3>{item.header}
+                                        <br/>
+                                        oloco   
+                                    </h3>
+                                    <p>{item.text}</p>
+                                </div>
+                            )
+                        })}
                     </section>
                 </section>
             </section>
