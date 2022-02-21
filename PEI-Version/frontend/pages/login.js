@@ -2,6 +2,9 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 import { AiOutlineGoogle } from "react-icons/ai";
 import { GoMarkGithub } from "react-icons/go";
+import { GoArrowRight } from "react-icons/go";
+import Link from 'next/link';
+import { Button } from '@mui/material';
 
 import styles from '../styles/Signup.module.css';
 import data from './data/webConfig.json';
@@ -30,6 +33,14 @@ function LoginPage(props) {
                     <input placeholder='Seu email' {...register("example", { required: true } )} type="email" />
                     <input placeholder='Sua senha' {...register("exampleRequired", { required: true })} type="password" />
                     {errors.exampleRequired && <span>This field is required</span>}
+                        <>
+                            <Link href='/signup'>
+                                <Button>
+                                    Quero criar uma conta
+                                        <GoArrowRight />
+                                </Button>
+                            </Link>
+                        </>
                     <section style={{display:'flex', paddingRight:'0'}}>
                         <div className={ styles['sign-Button'] }>
                             <button className={styles.signupButton} type='submit' >

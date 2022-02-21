@@ -1,9 +1,10 @@
+import React from 'react';
 import styles from './Advantages.module.css';
 import Image from 'next/image';
 
 export default function Advantages (props) { 
     let data = props.data;
-    const theLoader = ({src, width, height}) => {
+    const theLoader = ({src}) => {
         // console.log(width, height);
         return `${src}`;
       }
