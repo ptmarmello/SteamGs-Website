@@ -72,8 +72,10 @@ export default function MainSection({config}) {
                         {config.buttonLeft.text}
                       </Link>
                     </MainButton>
-                    <MainButton right>
-                      <Link href={`/about/`}>
+                    <MainButton right onClick={()=>{
+                      alert('Em breve!')
+                    }}>
+                      <Link href={`#`}>
                         {config.buttonRight.text}
                       </Link>
                     </MainButton>
