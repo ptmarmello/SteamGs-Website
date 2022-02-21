@@ -34,7 +34,7 @@ function LoginPage(props) {
                     <input placeholder='Sua senha' {...register("exampleRequired", { required: true })} type="password" />
                     {errors.exampleRequired && <span>This field is required</span>}
                         <>
-                            <Link href='/signup'>
+                            <Link href='/signup' passHref="/signup">
                                 <Button>
                                     Quero criar uma conta
                                         <GoArrowRight />

@@ -1,23 +1,24 @@
-// import React from 'react';
+import React from 'react';
 // import { sanityClient } from '../../utils/sanity';
 
-// export default function Challenge({response}) {
-// //   console.log(response[0].todoSummup[0].children[0].text);
-//   return (
-//     <>
-//         {response[0].todoSummup.map((item, index) => (
-//             <div key={index}>
-//                 {/* {console.log(item)} */}
-//                 {item.children.map((item, index) => (
-//                     <li key={index}>
-//                         {item.text}
-//                     </li>
-//                 ))}
-//             </div>
-//         ))}
-//     </>
-//   );
-// }
+export default function Challenge({response}) {
+//   console.log(response[0].todoSummup[0].children[0].text);
+  return (
+    <>
+        {/* {response[0].todoSummup.map((item, index) => (
+            <div key={index}>
+                {item.children.map((item, index) => (
+                    <li key={index}>
+                        {item.text}
+                    </li>
+                ))}
+            </div>
+        ))} */}
+
+        just a page to test the data
+    </>
+  );
+}
 
 
 // export const getServerSideProps = async () => {
