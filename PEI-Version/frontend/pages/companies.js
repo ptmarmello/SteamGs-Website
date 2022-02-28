@@ -9,7 +9,7 @@ import webconfig from './data/webConfig.json';
 
 export default function Companies() {
   let WAConfig = webconfig.components.companies.whereabouts;
-  let advConfig = webconfig.components.home.whereabouts;
+  let advConfig = webconfig.components.home.advantages;
   return (
     <div className={styles.container}>
       <Head>
