@@ -5,6 +5,7 @@ import { GoMarkGithub } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Link from 'next/link';
 import { Button } from '@mui/material';
+import { supabase } from "../utils/supabaseClient";
 
 import styles from '../styles/Signup.module.css';
 import data from './data/webConfig.json';
@@ -14,6 +15,7 @@ function LoginPage(props) {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [Loading, setLoading] = React.useState(true);
 
     // async function submitErrorFunction(e){
     //     e.preventDefault();
@@ -21,6 +23,24 @@ function LoginPage(props) {
     //         alert("Passwords do not match!");
     //     }
     // }
+
+    async function signInWithGithub() {    
+        try {
+            setLoading(true);
+            const { error } = await supabase.auth.signIn({
+            provider: 'github',
+            });
+            if (error) throw error;
+        } catch (error) {
+            alert(error.error_description || error.message);
+        } finally {
+            setLoading(false);
+            props.router.push('/trilhas');
+        }
+        Router.push({
+            pathname:'/trilhas',
+        })
+    }
 
     return (        
         <div className={styles['register-container']}>
@@ -46,11 +66,11 @@ function LoginPage(props) {
                             <button className={styles.signupButton} type='submit' >
                                 Entrar
                             </button>
-                            <button>
+                            {/* <button>
                                 <AiOutlineGoogle className={styles.icons} />
-                            </button>
-                            <button>
-                                <GoMarkGithub className={styles.icons} />
+                            </button> */}
+                            <button onClick={ () => { signInWithGithub() } }>
+                                <GoMarkGithub className={styles.icons}  />
                             </button>
                         </div>
                     </section>

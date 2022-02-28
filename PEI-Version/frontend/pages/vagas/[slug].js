@@ -1,3 +1,4 @@
+// import React from 'react';
 import { serialize } from 'next-mdx-remote/serialize'
 import fs from 'fs'
 import path from 'path'

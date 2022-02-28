@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 // import { AiOutlineGoogle } from "react-icons/ai";
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import { supabase } from "../utils/supabaseClient";
-// import { useRouter } from 'next/router';
+import Router from 'next/router';
 import { Button } from '@mui/material';
 import Link from 'next/link';
 import Head from 'next/head'
@@ -43,6 +43,9 @@ function signup(props) {
         } finally {
             setLoading(false);
         }
+        Router.push({
+            pathname:'/trilhas',
+        })
     }
 
     return (        
