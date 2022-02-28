@@ -9,6 +9,7 @@ import webconfig from './data/webConfig.json';
 
 export default function Companies() {
   let WAConfig = webconfig.components.companies.whereabouts;
+  let advConfig = webconfig.components.home.whereabouts;
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +26,7 @@ export default function Companies() {
         <Whereabouts type={WAConfig.secondParagraph} />
         <Whereabouts type={WAConfig.thirdParagraph} />
       
-      <Advantages />
+        <Advantages data={advConfig} />
 
       <Workin />
       
