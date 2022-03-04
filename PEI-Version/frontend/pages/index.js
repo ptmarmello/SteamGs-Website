@@ -5,15 +5,26 @@ import Forms from '../files/components/Forms/Forms';
 import Insightsection from '../files/components/InsightSection';
 import MainSection from '../files/components/MainSection/MainSection';
 import Whereabouts from '../files/components/Whereabouts';
-import Workin from '../files/components/Workin';
+// import Workin from '../files/components/Workin';
 import webconfig from './data/webConfig.json';
 
-import Divider from '@mui/material/Divider'
+import Divider from '@mui/material/Divider';
+import Router from 'next/router';
+import { useEffect } from 'react';
+import { supabase } from '../utils/supabaseClient';
 // import Link from 'next/link';
 
 export default function Home() {
   let WAConfig = webconfig.components.home.whereabouts;
   let advConfig = webconfig.components.home.advantages;
+
+  // verify if they user is logged in and redirect to the dashboard using supabase
+  useEffect(() => {
+    if ( supabase.auth.api.getUser()) {
+      confirm('Você já está logado, gostaria de ir para a página de Trilhas?')? Router.push('/trilhas'): null;
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>

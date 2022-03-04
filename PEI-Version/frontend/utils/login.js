@@ -1,39 +1,42 @@
+import { supabase } from "../utils/supabaseClient";
+import Router from "next/router";
+
 // USER LOGIN WITH GITHUB
 export async function signInWithGithub() {    
     try {
-        // setLoading(true);
-        const { user, error } = await supabase.auth.signIn({
+        const { user, session, error } = await supabase.auth.signIn({
         provider: 'github',
         });
-        if (error) throw error;
+        if (error){
+            throw error;  
+        }else{
+            Router.push({
+                pathname:'/tracks',
+            })
+        }
     } catch (error) {
-        alert(error.error_description || error.message);
+        console.log(error.error_description || error.message);
     } finally {
-        // setLoading(false);
-        // props.router.push('/trilhas');
+        Router.push({
+            pathname:'/tracks',
+        })
     }
-    Router.push({
-        pathname:'/trilhas',
-    })
 }
 
 // Signup with Github
 export async function signUpWithGithub() {    
     try {
-        // setLoading(true);
-        const { user, error } = await supabase.auth.signIn({
-        provider: 'github',
+        const { user, session, error } = await supabase.auth.signIn({
+            provider: 'github',
         });
         if (error) throw error;
     } catch (error) {
         alert(error.error_description || error.message);
     } finally {
-        // setLoading(false);
-        // props.router.push('/trilhas');
+        Router.push({
+            pathname:'/signform',
+        })
     }
-    Router.push({
-        pathname:'/signform',
-    })
 }
 
 // USER SIGNUP
@@ -44,10 +47,8 @@ export async function signUpWithEmail({ email, password, confirmPassword }){
             alert("Passwords do not match!")
         );
     }
-    
     try {
-        // setLoading(true);u
-        const { user, error } = await supabase.auth.signUp({
+        const { user, session, error } = await supabase.auth.signUp({
             email: email,
             password: password
         });
@@ -55,37 +56,30 @@ export async function signUpWithEmail({ email, password, confirmPassword }){
     } catch (error) {
         alert(error.error_description || error.message);
     } finally {
-        // setLoading(false);
-        // props.router.push('/trilhas');
+        Router.push({
+            pathname:'/signform',
+        })
     }
-    Router.push({
-        pathname:'/signform',
-        arguments:{
-            user: user
-        }
-    })
 }
 
 // USER LOGIN
-export async function signInWithEmail({ email, password }){   
+export async function signInWithEmail({ email: email, password: password }){   
     
     try {
         // setLoading(true);u
-        const { user, error } = await supabase.auth.signIn({
+        const { user, session, error } = await supabase.auth.api.signInWithEmail({
             email: email,
             password: password
         });
         if (error) throw error;
     } catch (error) {
         alert(error.error_description || error.message);
-    } finally {
-        // setLoading(false);
-        // props.router.push('/trilhas');
         Router.push({
-            pathname:'/trilhas',
-            arguments:{
-                user: user
-            }
+            pathname:'/signup',
+        })
+    } finally {
+        Router.push({
+            pathname:'/tracks',
         })
     }
 }

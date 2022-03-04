@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head'
 
 import styles from '../styles/Signup.module.css';
+import { signInWithGithub } from '../utils/login';
 
 function signup(props) {
 
@@ -15,38 +16,23 @@ function signup(props) {
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
     const [loading, setLoading] = useState(true);
-    // const [updating, setUpdating] = useState(false);
 
-    
-    // async function handleSubmit(e){
-    //     e.preventDefault();
-    //     if(password !== confirmPassword){
-    //         alert("Passwords do not match!");
-    //     }    
-    // }
-
-    // function handlePasswordChange(e){
-    //     if(confirmPassword !== password){
-    //         console.log('passwords do not match');
+    // async function signInWithGithub() {    
+    //     try {
+    //         setLoading(true);
+    //         const { error } = await supabase.auth.signIn({
+    //         provider: 'github',
+    //         });
+    //         if (error) throw error;
+    //     } catch (error) {
+    //         alert(error.error_description || error.message);
+    //     } finally {
+    //         setLoading(false);
     //     }
+    //     Router.push({
+    //         pathname:'/trilhas',
+    //     })
     // }
-
-    async function signInWithGithub() {    
-        try {
-            setLoading(true);
-            const { error } = await supabase.auth.signIn({
-            provider: 'github',
-            });
-            if (error) throw error;
-        } catch (error) {
-            alert(error.error_description || error.message);
-        } finally {
-            setLoading(false);
-        }
-        Router.push({
-            pathname:'/trilhas',
-        })
-    }
 
     return (        
         <div className={styles['register-container']}>
@@ -62,7 +48,7 @@ function signup(props) {
                     </p>
                 </section>
                 <section>
-                    <form>
+                    <form onSubmit={ alert("not ready for email yet")}>
                             <input
                                 type="text"
                                 name="email"
@@ -109,7 +95,7 @@ function signup(props) {
                                 <button className={styles.signupButton} type='submit' >
                                     Signup
                                 </button>   
-                                <button onClick={ () => { signInWithGithub() } }>
+                                <button onClick={ signInWithGithub() }>
                                     <GoMarkGithub className={styles.icons} />
                                 </button>
                             </div>

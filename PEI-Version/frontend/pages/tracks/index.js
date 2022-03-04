@@ -11,8 +11,9 @@ import { Button, Card, CardContent, CardActions, Divider, Paper } from '@mui/mat
 import { sanityClient } from '../../utils/sanity';
 
 
-function Lista({posts}) {
-    console.log(posts);
+function Lista({tracks}) {
+  // console.log(posts)
+  console.log(tracks);
     return (
         <div className={styles.container}>
           <nav>
@@ -25,13 +26,13 @@ function Lista({posts}) {
                color='grey' variant='middle' />
             </div>
             <section className={styles.mainSection}>
-              { data &&
-                data.trails.map((trail, index) => {
+              { tracks &&
+                tracks.map((track, index) => {
                   return(
                     <div className={styles.listaCard} key={index}>
 
-                      <Link href={`/trilhas/${encodeURIComponent(trail.slug)}`}
-                        as={`/trilhas/${encodeURIComponent(trail.slug)}`}
+                      <Link href={`/tracks/${encodeURIComponent(track.slug.current)}`}
+                        as={`/tracks/${encodeURIComponent(track.slug.current)}`}
                       >
                         <Card key={index}
                           sx={{backgroundColor: '#ccd1', color: '#000', borderRadius: '10px', width: '80%', margin: '0 auto', marginBottom: '20px',
@@ -39,14 +40,14 @@ function Lista({posts}) {
                         }}>
                           <CardContent>
                         <div className={styles.listaCardDiv}>
-                            <img src={trail.imgSource} alt={trail.imgAlt} />
+                            <img src={track.imgSource} alt={track.imgAlt} />
                           <div className={styles.listaCardHeaderDiv}>
-                            <h2>{trail.title}</h2>
-                            <p>{trail.description}</p>
-                            <p>{trail.motivation}</p>
+                            <h2>{track.title}</h2>
+                            <p>{track.description}</p>
+                            <p>{track.motivation}</p>
                             <div>
                               <ul>
-                                {trail.items.map((item, index) => {
+                                {track.items.map((item, index) => {
                                   return(
                                     <li key={index}>{item}</li>
                                     )
@@ -81,24 +82,44 @@ function Lista({posts}) {
     );
 }
 
-export async function getStaticProps() {
-    const files = fs.readdirSync(path.join('arqs/trilhas'));
+// export async function getStaticProps() {
+//     const files = fs.readdirSync(path.join('arqs/trilhas'));
   
-    const posts = files.map(filename => {
-      const markdownWithMeta = fs.readFileSync(path.join('arqs/trilhas', filename), 'utf-8');
-      const { data: frontMatter } = matter(markdownWithMeta);
+//     const posts = files.map(filename => {
+//       const markdownWithMeta = fs.readFileSync(path.join('arqs/trilhas', filename), 'utf-8');
+//       const { data: frontMatter } = matter(markdownWithMeta);
   
-      return {
-        frontMatter,
-        slug: filename.split('.')[0]
+//       return {
+//         frontMatter,
+//         slug: filename.split('.')[0]
+//       }
+//     })
+  
+//     return {
+//       props: {
+//         posts
+//       }
+//     }
+// }
+
+export async function getServerSideProps() {
+  const query = '*[_type == "Trilhas"]';
+  const tracks = await sanityClient.fetch(query);
+
+  if(!tracks.length) {
+      // throw new Error('Failed to fetch sanity data');
+      return{
+          props:{
+            tracks: []
+          }
       }
-    })
-  
-    return {
-      props: {
-        posts
+    } else{
+      return{
+          props:{
+              tracks
+          }
       }
-    }
+  }
 }
     
 export default Lista;
