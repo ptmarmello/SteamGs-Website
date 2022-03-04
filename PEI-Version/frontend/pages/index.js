@@ -18,12 +18,23 @@ export default function Home() {
   let WAConfig = webconfig.components.home.whereabouts;
   let advConfig = webconfig.components.home.advantages;
 
-  // verify if they user is logged in and redirect to the dashboard using supabase
-  useEffect(() => {
-    if ( supabase.auth.api.getUser()) {
-      confirm('Você já está logado, gostaria de ir para a página de Trilhas?')? Router.push('/trilhas'): null;
+  async function isLoggedIn() {
+    let user = await supabase.auth.api.getUser();
+    if (user.user !== null) {
+      confirm('You are logged in')? Router.push('/tracks') : null;
     }
+  }
+
+  useEffect(() => {
+    isLoggedIn();
   }, []);
+
+  // verify if they user is logged in and redirect to the dashboard using supabase
+  // useEffect(() => {
+  //   if ( supabase.auth.api.getUser() ) {
+  //     confirm('Você já está logado, gostaria de ir para a página de Trilhas?')? Router.push('/tracks'): null;
+  //   }
+  // }, []);
 
   return (
     <div className={styles.container}>

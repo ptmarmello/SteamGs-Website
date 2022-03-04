@@ -1,12 +1,8 @@
 import React from 'react';
-
-// import fs from 'fs';
-// import path from 'path';
-// import matter from 'gray-matter';
 import Link from 'next/link';
 import styles from './Lista.module.css';
 
-import data from '../data/webConfig.json';
+import { urlFor } from '../../utils/sanity';
 import { Button, Card, CardContent, CardActions, Divider, Paper } from '@mui/material';
 import { sanityClient } from '../../utils/sanity';
 
@@ -39,25 +35,25 @@ function Lista({tracks}) {
                           cursor: 'pointer', '&:hover': {backgroundColor: '#fff9', color: 'black'}, transition: 'background-color 0.4s ease-in-out'
                         }}>
                           <CardContent>
-                        <div className={styles.listaCardDiv}>
-                            <img src={track.imgSource} alt={track.imgAlt} />
-                          <div className={styles.listaCardHeaderDiv}>
-                            <h2>{track.title}</h2>
-                            <p>{track.description}</p>
-                            <p>{track.motivation}</p>
-                            <div>
-                              <ul>
-                                {track.items.map((item, index) => {
-                                  return(
-                                    <li key={index}>{item}</li>
-                                    )
-                                  })}
-                              </ul>
+                            <div className={styles.listaCardDiv}>
+                              <img src={ urlFor(track.mainImage.image).url() } alt={track.mainImage.alt} />
+                              <div className={styles.listaCardHeaderDiv}>
+                                <h2>{track.nome}</h2>
+                                <p>{track.descricao}</p>
+                                <p>{track.motivacao}</p>
+                                <div>
+                                  <ul>
+                                    {track.tags.map((item, index) => {
+                                      return(
+                                        <li key={index}>{item}</li>
+                                        )
+                                      })}
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        </CardContent>
-                      </Card>
+                          </CardContent>
+                        </Card>
                       </Link>
                     </div>
                   )
@@ -81,26 +77,6 @@ function Lista({tracks}) {
       </div>
     );
 }
-
-// export async function getStaticProps() {
-//     const files = fs.readdirSync(path.join('arqs/trilhas'));
-  
-//     const posts = files.map(filename => {
-//       const markdownWithMeta = fs.readFileSync(path.join('arqs/trilhas', filename), 'utf-8');
-//       const { data: frontMatter } = matter(markdownWithMeta);
-  
-//       return {
-//         frontMatter,
-//         slug: filename.split('.')[0]
-//       }
-//     })
-  
-//     return {
-//       props: {
-//         posts
-//       }
-//     }
-// }
 
 export async function getServerSideProps() {
   const query = '*[_type == "Trilhas"]';
