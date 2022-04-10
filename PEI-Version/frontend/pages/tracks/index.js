@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Lista.module.css';
 
 import { urlFor } from '../../utils/sanity';
 import { Button, Card, CardContent, CardActions, Divider, Paper } from '@mui/material';
 import { sanityClient } from '../../utils/sanity';
-
+import Router from 'next/router';
+import { supabase } from '../../utils/supabaseClient';
 
 function Lista({tracks}) {
-  // console.log(posts)
+
   console.log(tracks);
     return (
         <div className={styles.container}>
@@ -36,7 +37,7 @@ function Lista({tracks}) {
                         }}>
                           <CardContent>
                             <div className={styles.listaCardDiv}>
-                              <img src={ urlFor(track.mainImage.image).url() } alt={track.mainImage.alt} />
+                              <img src={ urlFor(track.mainImage.image).width(100).url() } alt={track.mainImage.alt} />
                               <div className={styles.listaCardHeaderDiv}>
                                 <h2>{track.nome}</h2>
                                 <p>{track.descricao}</p>
@@ -45,7 +46,7 @@ function Lista({tracks}) {
                                   <ul>
                                     {track.tags.map((item, index) => {
                                       return(
-                                        <li key={index}>{item}</li>
+                                        <li key={index} style={{ textTransform:'capitalize',paddingRight:'10px' }}>{item}</li>
                                         )
                                       })}
                                   </ul>
@@ -79,6 +80,21 @@ function Lista({tracks}) {
 }
 
 export async function getServerSideProps() {
+
+  // let user = await supabase.auth.api.getUser();
+  // if (user.user === null) {
+  //   return{
+  //     redirect: {
+  //       permanent:false,
+  //       destination: '/',
+  //     },
+  //     props:{
+
+  //     }
+  //   };
+  // }
+
+
   const query = '*[_type == "Trilhas"]';
   const tracks = await sanityClient.fetch(query);
 

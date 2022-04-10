@@ -7,10 +7,10 @@ const config ={
     useCdn: process.env.NODE_ENV === 'production',
 };
 
-export const urlFor = source => createImageUrlBuilder(config).image(source);
+// export const urlFor = source => createImageUrlBuilder(config).image(source);
 export const sanityClient = createClient(config);
 
-const builder = imageUrlBuilder(client)
-function urlFor(source) {
+const builder = imageUrlBuilder(sanityClient);
+export function urlFor(source) {
     return builder.image(source)
 }

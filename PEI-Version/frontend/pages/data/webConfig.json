@@ -21,6 +21,12 @@
                     "text":"Saiba mais"
                 }
             },
+            "InsightSection":{
+                "h1":"Descubra onde está e onder quer ir. ",
+                "spam": "E faça um plano para chegar lá!",
+                "p":"- Robert Kyosaki.",
+                "pspam":" Pai Rico, Pai Pobre."
+            },
             "whereabouts":{
                 "firstParagraph":{
                     "position": "left",

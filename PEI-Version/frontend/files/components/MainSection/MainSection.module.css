@@ -1,11 +1,23 @@
-.mainSection{
+
+.fullSection{
     width: 100%;
-    max-width: 944px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-image: url(../../../public/images/desenvolvaprojetos.png); */
+}
+
+.mainSection{
+    width: 100%;
+    max-width: 944px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .sectionDiv{

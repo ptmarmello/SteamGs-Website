@@ -5,7 +5,7 @@ import { GoMarkGithub } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Link from 'next/link';
 import { Button } from '@mui/material';
-// import { supabase } from "../utils/supabaseClient";
+import { supabase } from "../utils/supabaseClient";
 
 import styles from '../styles/Signup.module.css';
 import data from './data/webConfig.json';
@@ -26,7 +26,7 @@ function LoginPage(props) {
                     <h1>Login</h1>
                     <p>{data.components.login.paragraph}</p>
                 </section>
-                <form onSubmit={ alert("not ready yet") }>
+                <form>
                     <input placeholder='Seu email' {...register("example", { required: true } )} type="email" />
                     <input placeholder='Sua senha' {...register("exampleRequired", { required: true })} type="password" />
                     {errors.exampleRequired && <span>This field is required</span>}
@@ -55,3 +55,24 @@ function LoginPage(props) {
 }
 
 export default LoginPage;
+
+export async function getServerSideProps() {
+
+    let user = await supabase.auth.api.getUser();
+    if (user.user !== null) {
+      return{
+        redirect: {
+          permanent: true,
+          destination: '/tracks',
+        },
+        props:{
+  
+        }
+      };
+    }
+    return{
+        props:{
+        
+        }
+    }
+}

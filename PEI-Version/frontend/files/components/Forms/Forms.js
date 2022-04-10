@@ -3,54 +3,13 @@ import formStyle from './Form.module.css';
 import { supabase } from "../../../utils/supabaseClient";
 import { useState } from 'react';
 
+var fetch = require('node-fetch');
+
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
-import { Button, Card, CardActions, CardContent, CardHeader, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardHeader, Checkbox, FormGroup, Typography, FormControlLabel } from '@mui/material';
 
-// const MainButton = styled.button`
-//   width: 200px;
-//   height: 56px;
-//   border-radius: 20px;
-//   margin: 10px 10px;
-//   cursor: pointer;
-//   transition: ease-in-out 0.3s;
-
-//   ${props => props.right && css`
-//     background-color: #5658DD;
-//     &:hover{
-//       background-color: #151719;
-//       color: white;
-//       transform: scale(1.05);
-//     }
-//     &:active{
-//       background-color: #fff;
-//       color: black;
-//       transform: scale(1);
-//     }
-//   `};
-
-//   ${props => props.left && css`
-//     /* background-color: #5658DD; */
-//     &:hover{
-//       background-color: #5658DD;
-//       transform: scale(1.05);
-//     }
-//     &:active{
-//       background-color: #151719;
-//       color: white;
-//       transform: scale(1);
-//     }
-//   `};
-
-//   ${props => props.submit && css`
-//     height: 40px;
-//     width: 120px;
-//     border-radius: 5px;
-//     /* position: absolute; */
-//   `}
-
-// `;
 
 const CustomTextField = styled(TextField)({
   backgroundColor: 'whitesmoke',
@@ -138,6 +97,29 @@ export default function Forms(){
     } else {
       alert("Cadastro realizado com sucesso!");
     }
+    
+    // var url = "https://emailoctopus.com/api/1.6/lists/3e4a35bc-7abf-11ec-96e5-06b4694bee2a/contacts?api_key=7a0fd690-f8ce-40f7-a33a-34d26e236e87";
+    // var options = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Access-Control-Allow-Origin': 'https://localhost:3000',
+    //     },
+    //     body: JSON.stringify({
+    //         "api_key": process.env.OCTOPUS_API_KEY,
+    //         "email_address":email,
+    //         "fields":{
+    //             "FirstName":name , "LastName":""
+    //         }
+    //     })
+    // };
+    // fetch(url, options)
+    //   .then(response => {
+    //     console.log(response);
+    //   })
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
   };
 
   return (
@@ -177,7 +159,8 @@ export default function Forms(){
               InputLabelProps={{
                 
               }}
-              security='on'    
+              security='on'
+              onChange={(e) => setName(e.target.value)}
             />
             <CustomTextField required id="email-input-field"
               label="Email"
@@ -185,7 +168,26 @@ export default function Forms(){
               placeholder='Seu email'
               type="email"
               // helperText="E-mail não é válido"
+              
+              onChange={(e) => setEmail(e.target.value)}
             />
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={agreed}
+                    color="success"
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    sx={{
+                      color: 'white',
+                    }}
+                  />
+                }
+                label="Li e aceito os termos de uso"
+              />
+            </FormGroup>
+
+
             <CardActions>
               <Button onClick={(e) => handleSubmit(e) }
                 sx={{

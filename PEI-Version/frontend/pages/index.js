@@ -29,13 +29,6 @@ export default function Home() {
     isLoggedIn();
   }, []);
 
-  // verify if they user is logged in and redirect to the dashboard using supabase
-  // useEffect(() => {
-  //   if ( supabase.auth.api.getUser() ) {
-  //     confirm('Você já está logado, gostaria de ir para a página de Trilhas?')? Router.push('/tracks'): null;
-  //   }
-  // }, []);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -44,7 +37,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* <Particles /> */}
         <MainSection config={ webconfig.components.home.mainsection }/>
       </main>
 

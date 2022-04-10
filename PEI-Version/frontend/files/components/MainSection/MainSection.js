@@ -56,7 +56,7 @@ const MainButton = styled.button`
 export default function MainSection({config}) {
 
   return (
-    <>
+    <section className={styles.fullSection}>
       {/* {config.withNav.onOff===1 && <Navbar/>} */}
       <section className={styles.mainSection}>
           <div className={styles.sectionDiv}>
@@ -83,6 +83,6 @@ export default function MainSection({config}) {
             </div>
           }
       </section>
-    </>
+    </section>
   )
 }

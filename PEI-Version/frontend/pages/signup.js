@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 // import { AiOutlineGoogle } from "react-icons/ai";
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import { supabase } from "../utils/supabaseClient";
-import Router from 'next/router';
+// import Router from 'next/router';
 import { Button } from '@mui/material';
 import Link from 'next/link';
 import Head from 'next/head'
@@ -48,7 +48,7 @@ function signup(props) {
                     </p>
                 </section>
                 <section>
-                    <form onSubmit={ alert("not ready for email yet")}>
+                    <form>
                             <input
                                 type="text"
                                 name="email"
@@ -104,6 +104,30 @@ function signup(props) {
             </div>
         </div>
     );
+}
+
+
+export async function getServerSideProps() {
+    
+    let user = await supabase.auth.api.getUser();
+    if (user.user !== null) {
+        return{
+            redirect: {
+                permanent: true,
+                destination: '/tracks',
+            },
+            props:{
+                
+            }
+        };
+    }
+    else{
+        return{
+            props:{
+                
+            }
+        }
+    }
 }
 
 export default signup;
