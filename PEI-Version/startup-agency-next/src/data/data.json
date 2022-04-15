@@ -1,0 +1,75 @@
+{
+    "homepage":{
+        "SEO":{
+            "title":"SteamGroups - Hire and get Hired",
+            "description":"Hire and be Hired on SteamGroups. Find the best Steam Groups for your needs. Join a group and start chatting with your friends."
+        },
+        "Banner":{
+            "SectionHeading":{
+                "title":"Dreaming about a job position? Hire, be Hired or find your own way to be on SteamGroups",
+                "description":"Choose your path, and you will be on your way to a job position."
+            },
+            "Button":{
+                "title":"Get Started",
+                "path":"/pricing"
+            },
+            "Image":{
+                "src":"",
+                "alt":""
+            }
+        },
+        "Services":{
+            "title":"",
+            "description":"",
+            "data":[
+                {
+                    "id": 1,
+                    "icon": "",
+                    "title": "Marketing & advertising",
+                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                    "id": 2,
+                    "icon": "",
+                    "title": "Marketing & advertising",
+                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                    "id": 3,
+                    "icon": "",
+                    "title": "Marketing & advertising",
+                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                    "id": 4,
+                    "icon": "",
+                    "title": "Marketing & advertising",
+                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                }
+            ]
+        },
+        "Workflow":{
+            
+        },
+        "Testimonials":{
+            
+        },
+        "OurTeam":{
+            
+        },
+        "OtherServices":{
+            
+        },
+        "WhyUs":{
+            
+        },
+        "SubscribeUs":{
+            
+        },
+        "About":{
+            "title":"",
+            "description":"",
+            "keywords":""
+        }
+    }
+}
