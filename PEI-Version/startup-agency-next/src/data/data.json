@@ -19,52 +19,145 @@
             }
         },
         "Services":{
-            "title":"",
-            "description":"",
-            "data":[
-                {
-                    "id": 1,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
-                },
-                {
-                    "id": 2,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
-                },
-                {
-                    "id": 3,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
-                },
-                {
-                    "id": 4,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
-                }
-            ]
+            "title":"The best way to find and hire the best people",
+            "description":"Test, challenge, look for candidates and hire. All in the same place as flexible as it can be."
         },
         "Workflow":{
-            
+            "Sectionheader":{
+                "slogan":"How it works",
+                "title":"We have a simple workflow to get you started."
+            },
+            "data":[
+                {
+                  "id": 1,
+                  "title": "Set disbursement Instructions",
+                  "text":"Get your blood tests delivered at home collect a sample from the your blood tests."
+                },
+                {
+                  "id": 2,
+                  "title": "Assembly retrieves funds from your account",
+                  "text":"Get your blood tests delivered at home collect a sample from the your blood tests."
+                },
+                {
+                  "id": 3,
+                  "title": "Assembly initiates disbursement",
+                  "text":"Get your blood tests delivered at home collect a sample from the your blood tests."
+                },
+                {
+                  "id": 4,
+                  "title": "Customer receives funds payment",
+                  "text":"Get your blood tests delivered at home collect a sample from the your blood tests."
+                }
+              ]
         },
         "Testimonials":{
             
         },
         "OurTeam":{
-            
+            "Sectionheading":{
+                "title":"Our Team",
+                "description":"We are a team of dedicated individuals who are passionate about what we do."
+            }
         },
         "OtherServices":{
-            
+            "Sectionheading":{
+                "title":"Other Services",
+                "description":"Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred."
+            },
+            "data":[
+                {
+                  "id": 1,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "3D modeling & art",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 2,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Digital promotion",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 3,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Business Enterpri",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 4,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Marketing & adver",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 5,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Ultimate developm",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 6,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Online support",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                }
+            ]
         },
         "WhyUs":{
-            
+            "data":[
+                {
+                    "id":1,
+                    "tabTitle":"Why Us?",
+                    "title":"Well.. We are here to help you",
+                    "description":"We're super flexible and ready for your company's demand. Just name it and we'll help you the best way we can.",
+                    "moreLink":{
+                        "label":"More About our Flexibility",
+                        "path":"#"
+                    },
+                    "image":{
+                        "src":"/images/tab-illustration-1.png",
+                        "alt":"Illustração"
+                    },
+                    "list":[
+                        "Regular Reports",
+                        "Flexible Payment",
+                        "Total Evaluation",
+                        "On Demand Challenges"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "tabTitle": "Why you choose our service?",
+                    "title": "We will turn your idea in the successful business model framework",
+                    "description": "Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.",
+                    "moreLink":{
+                        "label":"More About our Flexibility",
+                        "path":"#"
+                    },
+                    "image":{
+                        "src":"/images/tab-illustration-1.png",
+                        "alt":"Illustração"
+                    },
+                    "list": [
+                      "Medical and vision",
+                      "Life insurance",
+                      "HSAs and FSAs",
+                      "Commuter benefits"
+                    ]
+                }
+            ]
         },
         "SubscribeUs":{
-            
+            "Sectionheading":{
+                "title":"Are you ready to get started?",
+                "description":"Get the latest news and updates about our services. We will not spam you."
+            }
         },
         "About":{
             "title":"",

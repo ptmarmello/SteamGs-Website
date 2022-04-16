@@ -5,54 +5,13 @@ import Tabs, { TabPane } from 'rc-tabs';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
 import { rgba } from 'polished';
 import { LearnMore } from 'components/link';
-import tabImage1 from 'assets/images/tab-illustration-1.png';
+// import tabImage1 from 'assets/images/tab-illustration-1.png';
 
-const data = [
-  {
-    id: 1,
-    tabTitle: 'Why you choose our service?',
-    title: `We will turn your idea in the successful business model framework`,
-    description: `Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.`,
-    moreLink: '#explore-more',
-    image: tabImage1,
-    list: [
-      'Medical and vision',
-      'Life insurance',
-      'HSAs and FSAs',
-      'Commuter benefits',
-    ],
-  },
-  {
-    id: 2,
-    tabTitle: 'What’s our business promise?',
-    title: `We will turn your idea in the successful business model framework`,
-    description: `Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.`,
-    moreLink: '#explore-more',
-    image: tabImage1,
-    list: [
-      'Medical and vision',
-      'Life insurance',
-      'HSAs and FSAs',
-      'Commuter benefits',
-    ],
-  },
-  {
-    id: 3,
-    tabTitle: 'What’s our role model plan?',
-    title: `We will turn your idea in the successful business model framework`,
-    description: `Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.`,
-    moreLink: '#explore-more',
-    image: tabImage1,
-    list: [
-      'Medical and vision',
-      'Life insurance',
-      'HSAs and FSAs',
-      'Commuter benefits',
-    ],
-  },
-];
+import Data from '../data/data.json'
+
 
 const WhyUs = () => {
+  const data = Data.homepage.WhyUs.data;
   return (
     <Box as="section" id="why-us" sx={styles.section}>
       <Container>
@@ -80,11 +39,11 @@ const WhyUs = () => {
                   ))}
                 </Box>
                 <Box sx={styles.learnMore}>
-                  <LearnMore path={item.moreLink} label="Explore more" />
+                  <LearnMore path={item.moreLink.path} label={item.moreLink.label} />
                 </Box>
               </Box>
               <Box sx={styles.illustration}>
-                <Image src={item.image} alt="illustration" />
+                <Image src={item.image.src} alt={item.image.alt} />
               </Box>
             </TabPane>
           ))}

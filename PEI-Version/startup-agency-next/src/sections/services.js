@@ -8,35 +8,39 @@ import icon1 from 'assets/images/icons/service1.png';
 import icon2 from 'assets/images/icons/service2.png';
 import icon3 from 'assets/images/icons/service3.png';
 
+import Data from '../data/data.json';
+
 const data = [
   {
     id: 1,
     icon: icon1,
-    title: 'Marketing & advertising',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
+    title: 'Etapa 1',
+    description: `Nessa etapa 1 acontecem muitas coisas, acredite. E são todas muito legais`,
   },
   {
     id: 3,
     icon: icon2,
-    title: 'Ultimate development',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
+    title: 'Etapa 2',
+    description: `Nessa etapa 2 acontecem coisas também.`,
   },
   {
     id: 4,
     icon: icon3,
-    title: 'Business Enterprise',
-    description: `Get your info tests delivered at home collect a sample from the your progress tests.`,
+    title: 'Etapa 3',
+    description: `Cansei.`,
   },
 ];
 
 const Services = () => {
+  // console.log(Data.homepage.Services)
+  const { title, description } = Data.homepage.Services;
   return (
     <Box as="section" id="services" sx={styles.section}>
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="Grow your startup with our Service"
-          description="Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents."
+          title={title}
+          description={description}
         />
         <Box sx={styles.contentWrapper}>
           {data?.map((item) => (

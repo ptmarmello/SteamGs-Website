@@ -9,12 +9,6 @@ import OurTeam from 'sections/our-team';
 import OtherServices from 'sections/other-services';
 import WhyUs from 'sections/why-us';
 import SubscribeUs from 'sections/subscribe-us';
-// import BlogSection from 'sections/blog-section';
-// import TestimonialCard from 'sections/testimonial';
-// import Package from 'sections/package';
-// import AgencyBanner from 'sections/agency-banner';
-// import TeamSection from 'sections/team-section';
-// import Pricing from 'sections/pricing-v1';
 import WorkFlow from 'sections/workflow';
 import Data from '../data/data.json';
 
@@ -32,7 +26,7 @@ export default function IndexPage() {
 
         <Services />
         <WorkFlow />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <OurTeam />
         <OtherServices />
         <WhyUs />

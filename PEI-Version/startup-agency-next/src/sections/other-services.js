@@ -10,6 +10,8 @@ import icon7 from 'assets/images/icons/service7.png';
 import icon8 from 'assets/images/icons/service8.png';
 import icon9 from 'assets/images/icons/service9.png';
 
+import Data from '../data/data.json';
+
 const data = [
   {
     id: 1,
@@ -56,13 +58,15 @@ const data = [
 ];
 
 const OtherServices = () => {
+  const {title, description} = Data.homepage.OtherServices.Sectionheading;
+  // const data = Data.homepage.OtherServices.data;
   return (
     <Box as="section" sx={styles.section}>
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="Other services you must appreciate"
-          description="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click into your preferred."
+          title={title}
+          description={description}
         />
         <Box sx={styles.contentWrapper}>
           {data?.map((item) => (
