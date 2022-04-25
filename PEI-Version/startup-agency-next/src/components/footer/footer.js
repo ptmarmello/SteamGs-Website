@@ -2,7 +2,8 @@
 /** @jsx jsx */
 import { jsx, Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
-import { NewLink } from 'components/link';
+// import { NewLink } from 'components/link';
+import Link from 'next/link';
 import Widget from './widget';
 import { menuItems } from './footer.data';
 import { rgba } from 'polished';
@@ -17,12 +18,12 @@ export default function Footer() {
               <Logo />
             </Box>
             <Box sx={styles.terms}>
-              <NewLink path="#!">Terms of use</NewLink>
+              <Link href="ourTerms">Terms of use</Link>
               <Text as="span">|</Text>
-              <NewLink path="#!">Privacy</NewLink>
+              <Link href="ourTerms">Privacy</Link>
             </Box>
             <Text as="p" sx={styles.copyright}>
-              Copyright by {new Date().getFullYear()} RedQ, Inc
+              Copyright by {new Date().getFullYear()} SteamGroups, LTDA. All rights reserved.
             </Text>
           </Box>
           {menuItems.map(({ id, title, items }) => (

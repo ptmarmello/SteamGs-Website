@@ -4,14 +4,18 @@ import React from 'react';
 import NextLink from 'next/link';
 import { jsx, Link as A } from 'theme-ui';
 import { Link as MenuLink } from 'react-scroll';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { HiOutlineChevronRight } from 'react-icons/hi';
+import { useRouter } from 'next/router';
 
 export function NavLink({ path, label, onPage, children, ...rest }) {
+
+  const router = useRouter();
+
   return (
     <>
       {
-        onPage==1 && 
+        (onPage==1 && router.pathname === '/') && 
         <MenuLink
           to={path}
           spy={true}
@@ -27,16 +31,12 @@ export function NavLink({ path, label, onPage, children, ...rest }) {
       }
 
       {
-        onPage==0 &&
-        <Link href={path}
-          className="nav-item"
-          prefetch={true}
-          sx="nav-item"
-          css={styles.learnMore}
+        (onPage==0 || router.pathname !== '/') &&
+        <NextLink href={path}
+        
         >
           {label}
-        </Link>
-
+        </NextLink>
       }
     
     </>

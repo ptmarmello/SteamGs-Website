@@ -70,7 +70,7 @@ const SubscribeUs = () => {
                 className="email-input"
                 placeholder="Enter your name"
               />
-              <Button variant="secondary">Subscribe</Button>
+              <Button variant="primary">Subscribe</Button>
             </Flex>
             <Box sx={styles.checkbox}>
               <Label htmlFor="no_spam" className={checked ? 'checked' : ''}>
@@ -103,7 +103,8 @@ const styles = {
       'none',
       null,
       null,
-      `#F8F0EA url(${illustration}) no-repeat center bottom / contain`,
+      // `#F8F0EA url(${illustration}) no-repeat center bottom / contain`,
+      `#9095AD no-repeat center bottom / contain`,
     ],
     pt: [8, null, null, null, 10],
     pb: [8, null, null, 9, 11],

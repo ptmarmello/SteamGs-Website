@@ -28,7 +28,7 @@ export default function IndexPage() {
         <WorkFlow />
         {/* <Testimonials /> */}
         <OurTeam />
-        <OtherServices />
+                                                    {/* <OtherServices /> */}
         <WhyUs />
         <SubscribeUs />
         {/* <TestimonialCard /> aqui tá dando ruim */}

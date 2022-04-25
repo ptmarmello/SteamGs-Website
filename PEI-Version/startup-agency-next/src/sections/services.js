@@ -14,20 +14,20 @@ const data = [
   {
     id: 1,
     icon: icon1,
-    title: 'Etapa 1',
-    description: `Nessa etapa 1 acontecem muitas coisas, acredite. E são todas muito legais`,
+    title: 'Gamified Career Path',
+    description: `Find the right trail for you, get experience, take the challenge, and get hired.`,
   },
   {
     id: 3,
     icon: icon2,
-    title: 'Etapa 2',
-    description: `Nessa etapa 2 acontecem coisas também.`,
+    title: 'Work on your skills',
+    description: `Get the right skills for the job, make some projects and get proven experience directly to your own Portfolio and Curriculum!`,
   },
   {
     id: 4,
     icon: icon3,
-    title: 'Etapa 3',
-    description: `Cansei.`,
+    title: "Show'em what you've got!",
+    description: `Take tests and challenges to show off your skills and GET HIRED!`,
   },
 ];
 

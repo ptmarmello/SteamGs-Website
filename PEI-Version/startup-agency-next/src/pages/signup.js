@@ -17,8 +17,8 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="/">
+        SteamGroups
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -100,10 +100,22 @@ export default function SignUp() {
                   autoComplete="new-password"
                 />
               </Grid>
+              <Grid item xs={12} sm={3}>
+                github
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                google
+              </Grid>
+              {/* <Grid item xs={12} sm={3}>
+                gitbucket
+              </Grid>
+              <Grid item xs={12} sm={3}>
+                outraOP
+              </Grid> */}
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="Yes, I want to receive marketing promotions and updates via email."
                 />
               </Grid>
             </Grid>
