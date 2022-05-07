@@ -1,5 +1,14 @@
 import React from 'react';
 
+// const Logo = () => {
+//   return(
+//     <>
+//       {/* <img src='./steamgs.jfif' alt='Logo' /> */}
+//     </>
+//   );
+// }
+
+
 const Logo = ({ white, ...props }) => {
   return (
     <svg viewBox="0 0 185.92 36.62" width={185.92} height={36.62} {...props}>

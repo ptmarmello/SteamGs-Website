@@ -2,12 +2,12 @@
     "homepage":{
         "SEO":{
             "title":"SteamGroups - Hire and get Hired",
-            "description":"Hire and be Hired on SteamGroups. Find the best Steam Groups for your needs. Join a group and start chatting with your friends."
+            "description":"The best professionals start here."
         },
         "Banner":{
             "SectionHeading":{
-                "title":"Dreaming about a job position? Hire, be Hired or find your own way to be on SteamGroups",
-                "description":"Choose your path, and you will be on your way to a job position."
+                "title":"The path to your career starts here. Get experience and get hired",
+                "description":"Embrace the journey to your dream job"
             },
             "Button":{
                 "title":"Get Started",
@@ -19,57 +19,182 @@
             }
         },
         "Services":{
-            "title":"",
-            "description":"",
-            "data":[
+            "title":"Forget about answering 50 math questions to get the job you want.",
+            "description":"Find the right trail for you, get experience, take the challenge, and get hired.",
+            "dataStep":[
                 {
                     "id": 1,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                    "icon": "assets/images/icons/service1.png",
+                    "title":"Gamified Career Path",
+                    "description":"Find the right trail for you, get experience, take the challenge, and get hired."
                 },
                 {
                     "id": 2,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                    "icon": "assets/images/icons/service2.png",
+                    "title":"Work on your experience",
+                    "description":"Find the right trail for you, get experience, take the challenge, and get hired."
+                    
                 },
                 {
                     "id": 3,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
-                },
-                {
-                    "id": 4,
-                    "icon": "",
-                    "title": "Marketing & advertising",
-                    "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                    "icon": "assets/images/icons/service3.png",
+                    "title":"Show'em what you've got!",
+                    "description":"Find the right trail for you, get experience, take the challenge, and get hired."
+                    
                 }
             ]
         },
         "Workflow":{
-            
+            "Sectionheader":{
+                "slogan":"How it works",
+                "title":"We have a simple workflow to get you started."
+            },
+            "data":[
+                {
+                  "id": 1,
+                  "title": "Sign Up",
+                  "text":"Sign up for a free account and start choosing your career path right away."
+                },
+                {
+                  "id": 2,
+                  "title": "Start the Hike",
+                  "text":"You got your career path, now it's time to start the hike. Pack your bags and let us will help you step by step till you find your dream job."
+                },
+                {
+                  "id": 3,
+                  "title": "Projects, Challenges and Tests",
+                  "text": "Solve problems and get experience that's what you need to get your dream job."
+                },
+                {
+                  "id": 4,
+                  "title": "Get Hired!",
+                  "text":"All you need to do is to show your work and get hired. Take the challenge and show what you're capable of. No need to worry about long and exhausting selection process."
+                }
+              ]
         },
         "Testimonials":{
             
         },
         "OurTeam":{
-            
+            "Sectionheading":{
+                "title":"Our Team",
+                "description":"We are a team of dedicated individuals who are passionate about what we do."
+            }
         },
         "OtherServices":{
-            
+            "Sectionheading":{
+                "title":"Advantages",
+                "description":"Focus only on learning and improving your skills, we take care of the rest. Your dream job is just a click away."
+            },
+            "data":[
+                {
+                  "id": 1,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "3D modeling & art",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 2,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Digital promotion",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 3,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Business Enterpri",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 4,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Marketing & adver",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 5,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Ultimate developm",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                },
+                {
+                  "id": 6,
+                  "icon": "",
+                  "moreLink": "#learn-more",
+                  "title": "Online support",
+                  "description": "Get your info tests delivered at home collect a sample from the your progress tests."
+                }
+            ]
         },
         "WhyUs":{
-            
+            "data":[
+                {
+                    "id":2,
+                    "tabTitle":"For Companies",
+                    "title":"Well.. We are here to help you",
+                    "description":"We're super flexible and ready for your company's demand. Just name it and we'll help you the best way we can.",
+                    "moreLink":{
+                        "label":"More about us",
+                        "path":"forcompanies"
+                    },
+                    "image":{
+                        "src":"/images/tab-illustration-1.png",
+                        "alt":"Illustração"
+                    },
+                    "list":[
+                        "Regular Reports",
+                        "Flexible Payment",
+                        "Total Evaluation",
+                        "On Demand Challenges"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "tabTitle": "For Students and Professionals",
+                    "title": "You make your way, we build the trail.",
+                    "description": "Even if you don't know how to get to your dream job. We'll help you step by step.",
+                    "moreLink":{
+                        "label":"Get started!",
+                        "path":"login"
+                    },
+                    "image":{
+                        "src":"/images/tab-illustration-1.png",
+                        "alt":"Illustração"
+                    },
+                    "list": [
+                      "Challenges, tests and Projects",
+                      "Certifications",
+                      "Curriculum and Portfolio",
+                      "Learn and improve your skills",
+                      "Get easily hired"
+                    ]
+                }
+            ]
         },
         "SubscribeUs":{
-            
+            "Sectionheading":{
+                "title":"Are you ready to get started?",
+                "description":"Pack your bags and be one of the first to take the hike."
+            }
         },
         "About":{
             "title":"",
             "description":"",
             "keywords":""
         }
+    },
+    "pricing":{
+
+    },
+    "about":{
+
+    },
+    "login":{
+
     }
 }

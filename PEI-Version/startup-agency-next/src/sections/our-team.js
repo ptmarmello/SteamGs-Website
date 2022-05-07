@@ -247,20 +247,36 @@ const OurTeam = () => {
             <Image src={arrowRight} alt="arrow right" />
           </button>
         )}
-
+        
         <Swiper
-          ref={swiperRef}
-          spaceBetween={30}
-          watchSlidesVisibility={true}
-          slidesPerView={5}
-          breakpoints={breakpoints}
-        >
-          {data?.map((item) => (
-            <SwiperSlide key={item.id}>
-              <TeamMember member={item} />
-            </SwiperSlide>
-          ))}
+        ref={swiperRef}
+        spaceBetween={15}
+        watchSlidesVisibility={true}
+        slidesPerView={3}
+        breakpoints={breakpoints}
+      >
+        {data?.map((item) => (
+          <SwiperSlide key={item.id}>
+            <TeamMember member={item} />
+          </SwiperSlide>
+        ))}
+
         </Swiper>
+        
+        {/* <Box
+            css={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignContent: 'center',
+              margin: '0 auto',
+              maxWidth: '70%',
+            }}
+          >
+            {data.map((item) => (
+              <TeamMember member={item} />
+            ))}
+        </Box> */}
+
       </Box>
     </Box>
   );
@@ -281,8 +297,8 @@ const styles = {
   },
   teamWrapper: {
     position: 'relative',
-    pl: [6],
-    pr: [6, null, null, 0],
+    // pl: [6, null, null, 0],
+    // pr: [6, null, null, 0],
     transition: '0.3s ease-in-out 0s',
     '.swiper-arrow': {
       backgroundColor: '#fff',

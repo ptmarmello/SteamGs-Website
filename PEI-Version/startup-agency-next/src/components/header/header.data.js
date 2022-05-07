@@ -19,13 +19,13 @@ export default [
     label: 'Why Us',
     onPage: 1,
   },
-  // {
-  //   path:'/pricing',
-  //   label:'Pricing',
-  //   onPage: 0,
-  // },
   {
-    path: 'login',
+    path:'/pricing',
+    label:'For Companies',
+    onPage:0,
+  },
+  {
+    path: '/login',
     label: 'Login',
     onPage: 0,
   },

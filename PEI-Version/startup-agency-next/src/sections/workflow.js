@@ -8,44 +8,24 @@ import PatternBG from 'assets/images/patternBG.png';
 import ArrowOdd from 'assets/images/arrowOdd.svg';
 import ArrowEven from 'assets/images/arrowEven.svg';
 
-const data = [
-  {
-    id: 1,
-    title: 'Set disbursement Instructions',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    id: 2,
-    title: 'Assembly retrieves funds from your account',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    id: 3,
-    title: 'Assembly initiates disbursement',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-  {
-    id: 4,
-    title: 'Customer receives funds payment',
-    text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
-  },
-];
+import Data from '../data/data.json';
 
 export default function WorkFlow() {
+  // console.log(Data.homepage.Workflow.Sectionheader);
+  const { slogan, title} = Data.homepage.Workflow.Sectionheader;
+  const data = Data.homepage.Workflow.data;
+  // console.log(data)
   return (
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-          slogan="Whats the function"
-          title="Let’s see how it works"
+          slogan={slogan}
+          title={title}
           isWhite={true}
         />
 
         <Grid sx={styles.grid}>
+          
           {data.map((item) => (
             <Box sx={styles.card} key={item.id}>
               <Box sx={styles.iconBox}>{`0${item.id}`}</Box>

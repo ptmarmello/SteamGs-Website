@@ -1,8 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Heading, Image } from 'theme-ui';
-import { NewLink } from 'components/link';
+// import { NewLink } from 'components/link';
 import { rgba } from 'polished';
+import Link from 'next/link';
 
 const Widget = ({ title, items }) => {
   return (
@@ -10,9 +11,10 @@ const Widget = ({ title, items }) => {
       <Heading as="h4">{title}</Heading>
       <ul>
         {items.map(({ path, label, icon }, i) => (
-          <li key={i}>
+          <li key={i} >
             {icon && <Image src={icon} alt={label} />}
-            <NewLink path={path} key={i} label={label} variant="footer" />
+            {/* <NewLink path={path} key={i} label={label} variant="footer" /> */}
+            <Link key={i} href={path} >{label}</Link>
           </li>
         ))}
       </ul>
@@ -45,6 +47,12 @@ const styles = {
       },
       a: {
         color: rgba('#02073E', 0.8),
+        textDecoration: 'none',
+        transition: '0.3s ease',
+        '&:hover': {
+          color: 'primary',
+          transform: 'scale(1.03)',
+        }
       },
     },
   },

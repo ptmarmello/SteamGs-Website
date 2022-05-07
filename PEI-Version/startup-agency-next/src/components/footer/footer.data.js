@@ -9,25 +9,21 @@ export const menuItems = [
     title: 'About Us',
     items: [
       {
-        path: '#!',
-        label: 'Support Center',
+        path: 'forStudents',
+        label: 'For Students',
       },
       {
-        path: '#!',
-        label: 'Customer Support',
+        path: 'forCompanies',
+        label: 'For Companies',
       },
       {
-        path: '#!',
-        label: 'About Us',
+        path: 'forUniversities',
+        label: 'For Universities',
       },
       {
-        path: '#!',
-        label: 'Copyright',
-      },
-      {
-        path: '#!',
-        label: 'Popular Campaign',
-      },
+        path: 'aboutus',
+        label: 'Who we are',
+      }
     ],
   },
   {
@@ -36,29 +32,17 @@ export const menuItems = [
     items: [
       {
         path: '#!',
-        label: 'Return Policy ',
-      },
-      {
-        path: '#!',
         label: 'Privacy Policy',
       },
       {
         path: '#!',
         label: 'Terms & Conditions',
-      },
-      {
-        path: '#!',
-        label: 'Site Map',
-      },
-      {
-        path: '#!',
-        label: 'Store Hours',
-      },
+      }
     ],
   },
   {
     id: 4,
-    title: 'My Account',
+    title: 'Help',
     items: [
       {
         path: '#!',
@@ -70,16 +54,8 @@ export const menuItems = [
       },
       {
         path: '#!',
-        label: 'directories',
-      },
-      {
-        path: '#!',
-        label: 'Images & B-roll',
-      },
-      {
-        path: '#!',
-        label: 'Permissions',
-      },
+        label: 'Support',
+      }
     ],
   },
   {

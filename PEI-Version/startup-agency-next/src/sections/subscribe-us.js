@@ -3,21 +3,43 @@
 import { useState, useCallback } from 'react';
 import { jsx, Box, Container, Button, Flex, Checkbox, Label } from 'theme-ui';
 import { rgba } from 'polished';
+import { supabase } from 'utils/supabaseClient';
+
 import SectionHeading from 'components/section-heading';
 import Input from 'components/input';
 import illustration from 'assets/images/subscribe-bg.png';
 
+import Data from '../data/data.json';
+
 const SubscribeUs = () => {
   const [checked, setChecked] = useState(false);
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
 
-  const handleSubmit = (e) => {
+
+  async function handleSubmit(e){
     e.preventDefault();
     console.log('submitted.');
+    if (email.length < 10){
+      alert("E-mail não é válido");
+      return;
+    }
+    const { error } = await supabase
+      .from("pre-register")
+      .insert([{ name, email, agreed: checked }]);
+    if (error) {
+      console.log(error.message);
+      alert("Erro ao enviar formulário");
+    } else {
+      alert("Cadastro realizado com sucesso!");
+    }
   };
 
   const handleCheckbox = useCallback(() => {
     setChecked(!checked);
   }, [checked]);
+
+  const data = Data.homepage.SubscribeUs.Sectionheading;
 
   return (
     <Box as="section" sx={styles.section} variant="section.subscribe">
@@ -25,8 +47,8 @@ const SubscribeUs = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Like our service? Subscribe us"
-            description="We have more than thousand of creative entrepreneurs and stat joining our business"
+            title={data.title}
+            description={data.description}
           />
           <Box as="form" sx={styles.subscribe} onSubmit={handleSubmit}>
             <Flex sx={styles.inputGroup}>
@@ -37,9 +59,18 @@ const SubscribeUs = () => {
                 id="email"
                 type="email"
                 className="email-input"
-                placeholder="Enter Email address"
+                placeholder="Enter your Email address"
               />
-              <Button variant="secondary">Subscribe</Button>
+              <Label htmlFor="email" variant="styles.srOnly">
+                Name
+              </Label>
+              <Input
+                id="name"
+                type="text"
+                className="email-input"
+                placeholder="Enter your name"
+              />
+              <Button variant="primary">Subscribe</Button>
             </Flex>
             <Box sx={styles.checkbox}>
               <Label htmlFor="no_spam" className={checked ? 'checked' : ''}>
@@ -72,7 +103,8 @@ const styles = {
       'none',
       null,
       null,
-      `#F8F0EA url(${illustration}) no-repeat center bottom / contain`,
+      // `#F8F0EA url(${illustration}) no-repeat center bottom / contain`,
+      `#9095AD no-repeat center bottom / contain`,
     ],
     pt: [8, null, null, null, 10],
     pb: [8, null, null, 9, 11],
@@ -113,7 +145,8 @@ const styles = {
     },
   },
   inputGroup: {
-    flexDirection: ['column', null, null, 'row'],
+    flexDirection: ['column', null, null, 'column'],
+    gap: ['10px', null, null, '20px'],
   },
   checkbox: {
     mt: ['24px'],
