@@ -4,8 +4,8 @@ import imageUrlBuilder from '@sanity/image-url';
 
 
 const config ={
-    dataset: process.env.next_public_sanity_dataset,
-    projectId: process.env.next_public_sanity_project_id,
+    dataset: "production",
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     apiVersion: '2021-08-31',
     token: 'sanity-auth-token',
     useCdn: process.env.NODE_ENV === 'production',
