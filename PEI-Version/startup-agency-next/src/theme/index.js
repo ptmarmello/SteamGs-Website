@@ -1,3 +1,5 @@
+// import './global.css';
+
 export default {
   // example colors with dark mode
   colors: {
