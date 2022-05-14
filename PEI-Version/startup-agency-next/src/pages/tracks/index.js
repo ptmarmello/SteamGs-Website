@@ -6,16 +6,15 @@ import { urlFor } from '../../utils/sanity';
 import { Button, Card, CardContent, CardActions, Divider, Paper } from '@mui/material';
 import { sanityClient } from '../../utils/sanity';
 import Router from 'next/router';
-import { supabase } from '../../utils/supabaseClient';
+import UserNavbar from 'components/userNavbar';
+// import { supabase } from '../../utils/supabaseClient';
 
 function Lista({tracks}) {
 
-  console.log(tracks);
+  // console.log(tracks);
     return (
         <div className={styles.container}>
-          <nav>
-            vai ter um Navbar aqui
-          </nav>
+          <UserNavbar />
           <main className={styles['mainDiv']}>
             <div className={styles.divHeader}>
               <h1 className={styles.headerText}>Trilhas</h1>
@@ -62,16 +61,7 @@ function Lista({tracks}) {
               }
             </section>
           </main>
-          {/* <Card 
-            sx={{width: '90%', margin:'0 auto'}}
-            color='#fff669'
-            >
-              <CardContent>
-                Não sabe por onde começar? Faça nosso teste
-                <Button>Entre aqui</Button>
-              </CardContent>
-            
-          </Card> */}
+          
           <footer>
             footer  
           </footer>
