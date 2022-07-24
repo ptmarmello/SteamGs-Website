@@ -20,7 +20,7 @@ export default [
     onPage: 1,
   },
   {
-    path:'/pricing',
+    path:'/forcompanies',
     label:'For Companies',
     onPage:0,
   },

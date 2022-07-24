@@ -11,6 +11,7 @@ import AgencyBanner from 'sections/agency-banner';
 import Services from 'sections/services';
 import Testimonials from 'sections/testimonials';
 import OtherServices from 'sections/other-services';
+import SubscribeUs from 'sections/subscribe-us';
 
 // import { Container } from './styles';
 
@@ -20,15 +21,16 @@ function pages() {
     <ThemeProvider theme={theme}>
     <Layout>
       <SEO
-        title="SteamGroups | Pricing"
+        title="SteamGroups | For Companies"
         description="Collection of free top of the line startup landing templates built using react/ next js. Free to download, simply edit and deploy! Updated weekly!"
       />
       <AgencyBanner />
       <Services />
       <Pricing />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <OtherServices />
 
+      {/* <SubscribeUs /> */}
     </Layout>
   </ThemeProvider>
   );
