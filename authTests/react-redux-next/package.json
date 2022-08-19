@@ -1,0 +1,23 @@
+{
+  "name": "react-redux-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "next": "^12.2.5",
+    "next-cookie": "^2.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
