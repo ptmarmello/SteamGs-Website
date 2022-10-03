@@ -19,6 +19,7 @@ module.exports = {
         backgroundColor: '#121214',
         shadowpaper: 'linear-gradient(180.0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 67.08%)',
         gradient: 'linear-gradient(to right, #fc5c7d, #6a82fb, #3f51b5)',
+        'gradient-inversed': 'linear-gradient(to left, #fc5c7d, #6a82fb, #3f51b5)',
         homebg : "url('/purplesound.mp4')",
       }
     },

@@ -2,12 +2,40 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
-import { Path } from 'phosphor-react'
+import { Heart, Path } from 'phosphor-react'
 import Weare from '../src/components/Weare'
 import Vagas from '../src/components/Vagas'
 
 export default function Home() {
   const router = useRouter();
+
+  const shortcutLists = [
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+    {
+      title: 'Frontend',
+      url: 'frontend/index.html',
+    },
+  ]
+
   return (
     <div className="py-0 px-8 text-white">
       <Head>
@@ -33,18 +61,24 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="grid grid-cols-6 gap-6 mt-16 grid-flow-row">
-            
-            <a href="" className="relative rounded-lg overflow-hidden">
-              <img src="" alt="game " />
+        <div className="grid grid-cols-6 gap-8 mt-16 grid-flow-row">
+            { shortcutLists.map( (item, id) =>{
+              return(
+                <>    
+                  <a href={item.url} key={id} className="w-fit relative rounded-lg overflow-hidden">
+                    {/* <img src="" alt="game " /> */}
 
-              <div className="w-full pt-16 pb-4 px-4 bg-gameGradient absolute bottom-0 left-0 right-0">
-                <strong className="font-bold text-white block" >Game Name</strong>
-                <span className="text-zinc-300 text-sm block mt-1">
-                  n° anuncios
-                </span>
-              </div>
-            </a>
+                    <div className="py-3 px-4 bg-gradient-to-r from-primary to-[#fc5c7d] text-white rounded flex items-center gap-3 transition duration-500 ease-in-out">
+                        {/* classname="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" */}
+                      <strong className="font-bold text-white block" >{item.title}</strong>
+                      {/* <span className="text-zinc-300 text-sm block mt-1">
+                        
+                      </span> */}
+                    </div>
+                  </a>
+                </>
+              );
+            } ) }
             
         </div>
 
@@ -57,7 +91,7 @@ export default function Home() {
               </span>
             </div>
         
-            <button className="py-3 px-4 bg-primary text-white rounded hover:bg-[#3f51d6] flex items-center gap-3 "
+            <button className="py-3 px-4 bg-primary text-white rounded hover:bg-[#3f51d6] flex items-center gap-3 transition duration-300 ease-in-out"
               onClick={() => {
                 router.push('/signup');
               }}
@@ -77,17 +111,17 @@ export default function Home() {
           <Weare />
       </div>
 
-      <Vagas />
+      {/* <Vagas /> */}
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Made with <Heart /> by{'SteamGroups '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
           </span>
         </a>
       </footer>
