@@ -1,0 +1,133 @@
+{
+    "frontend":{
+        "groups":[
+           {
+            "name":"junior",
+            "levels":[
+                {
+                    "name":"Nível 1",
+                    "steps":[
+                        {
+                            "title":"Know the Web",
+                            "substeps":[
+                                {
+                                    "title":"substep 1"
+                                },
+                                {
+                                    "title":"substep 2"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"blabla 1"
+                        },
+                        {
+                            "title":"blabla 2"
+                        }
+                    ],
+                    "completedSteps":"false",
+                    "challenges":[
+                        {
+                            "title":"Know the Web",
+                            "challenge_id": 0,
+                            "description":"",
+                            "url":"",
+                            "image":"",
+                            "tags":[
+
+                            ],
+                            "completed":"false",
+                            "completed_on":"",
+                            "created_on":"",
+                            "updated_on":""
+                        }
+                    ]
+
+                },
+                {
+                    "name":"Nível 2",
+                    "steps":[
+                        {
+                            "title":"Know the Web"
+                        }
+                    ],
+                    "completedSteps":"false",
+                    "challenges":[
+                        {
+                            "title":"Know the Web",
+                            "challenge_id": 0,
+                            "description":"",
+                            "url":"",
+                            "image":"",
+                            "tags":[
+
+                            ],
+                            "completed":"false",
+                            "completed_on":"",
+                            "created_on":"",
+                            "updated_on":""
+                        }
+                    ]
+                },
+                {
+                    "name":"Nível 3",
+                    "steps":[
+                        {
+                            "title":"Know the Web"
+                        }
+                    ],
+                    "completedSteps":"false",
+                    "challenges":[
+                        {
+                            "title":"Know the Web",
+                            "challenge_id": 0,
+                            "description":"",
+                            "url":"",
+                            "image":"",
+                            "tags":[
+
+                            ],
+                            "completed":"false",
+                            "completed_on":"",
+                            "created_on":"",
+                            "updated_on":""
+                        }
+                    ]
+
+                }
+            ]
+           },
+           {
+            "name":"pleno",
+            "levels":[
+                {
+                    "name":"Nível 1",
+                    "steps":[
+                        {
+                            "title":"Know the Web"
+                        }
+                    ],
+                    "completedSteps":"false",
+                    "challenges":[
+                        {
+                            "title":"Know the Web",
+                            "challenge_id": 0,
+                            "description":"",
+                            "url":"",
+                            "image":"",
+                            "tags":[
+
+                            ],
+                            "completed":"false",
+                            "completed_on":"",
+                            "created_on":"",
+                            "updated_on":""
+                        }
+                    ]
+
+                }
+            ]
+           }
+        ]
+    }
+}
