@@ -24,10 +24,11 @@ function TabPanel(props: TabPanelProps) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      
     >
       {value === index && (
-        <Box sx={{ p: 1, m:1, backgroundColor:'white', color: 'black' }}>
-          <Typography>{children}</Typography>
+        <Box sx={{ p: 1, m:1, backgroundColor:'transparent' }}>
+          <Box>{children}</Box>
         </Box>
       )}
     </div>
@@ -46,21 +47,33 @@ type Btabs = {
 }
 
 export default function TabComponent({item}: Btabs) {
+
+  const [currentLevel, setLevel] = React.useState(0);
+
   const [value, setValue] = React.useState(0);
   const groups = Data.frontend.groups;
+
+  const handleDisable = (id: number) =>{
+    if(currentLevel >= id){
+      return false;
+    }
+
+
+    return true;
+  }
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
   return (
-    <Box sx={{ width: '100%'}}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor:'white' }}>
-        <Tabs value={value} onChange={handleChange} variant='fullWidth' aria-label={item.name}>
+    <Box sx={{ width: '100%', backgroundColor:'#101011', minHeight:'640px', borderRadius:'16px'}}>
+      <Box sx={{ zIndex:2, borderBottom: 1, borderColor: 'divider', backgroundColor:'#202021', borderRadius:'16px 16px 0 0' }}>
+        <Tabs value={value} onChange={handleChange} variant='fullWidth' aria-label={item.name}  >
           {
             item.levels.map((level, id) => {
               return(
-                <Tab label={level.name} {...a11yProps(id)} />
+                <Tab label={level.name} {...a11yProps(id)} disabled={handleDisable(id)} sx={{ color:"rgba(500,500,300,0.4)" }} />
               )
             })
           }
@@ -69,8 +82,8 @@ export default function TabComponent({item}: Btabs) {
       {
         item.levels.map((level, id) => {
           return (
-            <TabPanel value={value} index={id} >
-              <NonLinearStepper stepData={ level.steps } son={false} />
+            <TabPanel value={value} index={id} key={id} >
+              <NonLinearStepper stepData={ level.steps } son={false} currentLevel={currentLevel} setLevel={setLevel} />
             </TabPanel>
           )
         })
