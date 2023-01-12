@@ -1,0 +1,51 @@
+
+export default {
+    name:'levels',
+    title:'Level',
+    type:'object',
+    fields:[
+        {
+            name:'name',
+            title:'Name',
+            type:'string',
+        },
+        {
+            name:'step',
+            title:'Step',
+            type:'array',
+            of:[
+                {
+                    type:'reference',
+                    to:[
+                        {
+                            type:'steps'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name:'projects',
+            title: 'Final Project',
+            type:'array',
+            of:[
+                {
+                    type:'reference',
+                    to:[
+                        {
+                            type:'projects'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name:'completed',
+            title:'Completed',
+            type:'boolean',
+            options:{
+                initialValue:'false'
+            }
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+export default {
+    name: 'steps',
+    title:'Steps',
+    type:'document',
+    fields:[
+        {
+            name:'title',
+            title:'Title',
+            type:'string',
+        },
+        {
+            name:'link',
+            title: 'Link',
+            type:'array',
+            of:[
+                {
+                    name:'internallink',
+                    title:'Internal Link',
+                    type:'object',
+                    fields:[
+                        {
+                            name:'title',
+                            title:'Title',
+                            type:'string',
+                        },
+                        {
+                            name:'url',
+                            title:'URL',
+                            type:'string'
+                        }
+                    ]
+                },
+                {
+                    name:'externallink',
+                    title:'External Link',
+                    type:'object',
+                    fields:[
+                        {
+                            name:'title',
+                            title:'Title',
+                            type:'string',
+                        },
+                        {
+                            name:'url',
+                            title:'URL',
+                            type:'url'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name:'subSteps',
+            title:'Substeps',
+            type:'array',
+            of:[
+                { 
+                    type:'reference',
+                    to:[
+                        {
+                            type:'steps'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name:'challenge',
+            title:'Challenge',
+            type:'array',
+            of:[
+                {
+                    type:'reference',
+                    to:[
+                        { type:'challenges' }
+                    ]
+                }
+            ]
+        },
+        {
+            name:'finished',
+            title:'Finished',
+            type:'boolean',
+        },
+    ]
+}
