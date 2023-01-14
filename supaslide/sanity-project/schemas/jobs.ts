@@ -9,6 +9,14 @@ export default {
             type: 'string'
         },
         {
+            name:'id',
+            title:'ID',
+            type:'number',
+            options:{
+                isHighlighted:true,
+            }
+        },
+        {
             name:'diversity',
             title:'Part of diversity Program?',
             type: 'boolean'
@@ -34,6 +42,28 @@ export default {
             name:'seniority',
             title:'Seniority Level',
             type: 'string',
+            options:{
+                list:[
+                    {
+                        title:'Entry Level',
+                        value:'entrylevel'
+                    },
+                    {
+                        title:'Junior',
+                        value:'Junior'
+                    },
+                    {
+                        title:'Pleno/Midlevel',
+                        value:'midlevel'
+                    },
+                    {
+                        title:'Senior',
+                        value:'Senior'
+                    }
+                ],
+                layout:'dropdown'
+            },
+            
         },
         {
             name:'validTrails',

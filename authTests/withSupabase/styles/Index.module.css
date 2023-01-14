@@ -1,0 +1,37 @@
+.indexButtonLeft{
+    z-index:1;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+
+}
+
+.indexImageLeft {
+    display: none;
+    z-index:5;
+}
+
+.indexButtonLeft:hover + .indexImageLeft {
+    display: block;
+    max-width:12rem !important;
+    background-color:red;
+}
+
+.indexButtonRight{
+    z-index:1;
+    padding-top: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+}
+
+.indexImageRight{
+    display: none;
+    z-index:5;
+}
+
+.indexButtonRight:hover + .indexImageRight {
+    display: block;
+    max-width:12rem !important;
+    transform: scale(1.25);
+    transition: all 0.2s;
+}

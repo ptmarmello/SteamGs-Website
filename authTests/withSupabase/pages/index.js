@@ -3,7 +3,8 @@ import vid from '../src/assets/backgroundVideos/purpleDust.mp4'
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material'
 import centerImg from '../src/assets/images/cloud-technology-with-futuristic-hologram-smartwatch.jpg';
 import Image from 'next/image';
-
+import { Button } from '@mui/material';
+import styles from '../styles/Index.module.css'
 
 export default function Home() {
   return (
@@ -69,19 +70,46 @@ export default function Home() {
                 </div>
 
                 <div className='items-center flex flex-1 justify-between left-0 right-0 mt-16 w-[95%] m-[auto] '>
-                    <aside className=' h-fit w-fit max-w-[12rem]'>
+                    <aside className={styles.indexImageLeft} id='indexImageLeft'>
                         imagem da esquerda
                     </aside>
 
-                    <aside className=' h-fit max-w-[12rem] w-fit'>
+                    <aside className={styles.indexImageRight} id='indexImageRight'>
                         imagem da direita
                     </aside>
                 </div>
                 
                 <div className=' w-[75%] mx-[auto] h-fit flex my-0 items-center justify-center'>
-                    <div>
-                        {/* <Image src={centerImg} alt="centerImg" className="w-[100%] max-h-10" /> */}
+                    <div className='grid grid-cols-2 gap-8 items-center justify-items-center'>
+
+                        <div className={styles.indexButtonLeft} onMouseOver={()=>{
+                            document.querySelector(`.${styles.indexImageLeft}`).style.display='block'                            
+                        }}
+                        onMouseLeave={()=>{
+                            document.querySelector(`.${styles.indexImageLeft}`).style.display='none'
+                        }}
                         
+                        >
+                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl'>
+                                Quero contratar
+                            </Button>
+                        </div>
+                        
+                        <div className={styles.indexButtonRight} onMouseOver={()=>{
+                            document.querySelector(`.${styles.indexImageRight}`).style.display='block'                            
+                        }}
+                        onMouseLeave={()=>{
+                            document.querySelector(`.${styles.indexImageRight}`).style.display='none'
+                        }}>
+                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl'>
+                                Quero ser Pro
+                            </Button>
+
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </section>
@@ -89,6 +117,7 @@ export default function Home() {
         </div>
 
         <div>
+            
             
         </div>
     
