@@ -69,19 +69,20 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='items-center flex flex-1 justify-between left-0 right-0 mt-16 w-[95%] m-[auto] '>
-                    <aside className={styles.indexImageLeft} id='indexImageLeft'>
-                        imagem da esquerda
-                    </aside>
+                <div className=' w-[90%] mx-[auto] h-fit fixed flex my-0'>
+                    <div className='grid grid-cols-2 gap-8' >
+                        <aside className={styles.indexImageLeft} id='indexImageLeft'>
+                            imagem da esquerda
+                        </aside>
 
-                    <aside className={styles.indexImageRight} id='indexImageRight'>
-                        imagem da direita
-                    </aside>
+                        <aside className={styles.indexImageRight} id='indexImageRight'>
+                            imagem da direita
+                        </aside>
+                    </div>
                 </div>
                 
                 <div className=' w-[75%] mx-[auto] h-fit flex my-0 items-center justify-center'>
                     <div className='grid grid-cols-2 gap-8 items-center justify-items-center'>
-
                         <div className={styles.indexButtonLeft} onMouseOver={()=>{
                             document.querySelector(`.${styles.indexImageLeft}`).style.display='block'                            
                         }}

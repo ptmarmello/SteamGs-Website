@@ -1,14 +1,14 @@
 .indexButtonLeft{
-    z-index:1;
-    padding-top: 2rem;
+    z-index:10;
+    /* padding-top: 2rem;
     padding-left: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 4rem; */
 
 }
 
 .indexImageLeft {
     display: none;
-    z-index:5;
+    z-index: -5;
 }
 
 .indexButtonLeft:hover + .indexImageLeft {
@@ -18,15 +18,15 @@
 }
 
 .indexButtonRight{
-    z-index:1;
-    padding-top: 2rem;
+    z-index:10;
+    /* padding-top: 2rem;
     padding-right: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 4rem; */
 }
 
 .indexImageRight{
     display: none;
-    z-index:5;
+    z-index: -5;
 }
 
 .indexButtonRight:hover + .indexImageRight {
