@@ -64,6 +64,9 @@ export default function Home() {
                             <h1  className='text-6xl'>
                                 Sua carreira <br/><span>&nbsp; &nbsp; </span> Começa aqui!
                             </h1>
+                            <div>
+                                <p>algo aqui</p>
+                            </div>
                         </main>
                     </div>
                 </div>
@@ -118,7 +121,15 @@ export default function Home() {
             </section>
 
             <div className=' min-w-full min-h-full' >
-                <div className=' w-[100%] mx-[auto] h-[100%] grid grid-cols-3 grid-rows-2 grid-flow-col my-0 items-center justify-center'>
+                <div className=' w-full mx-[auto] my-0 justify-center pt-24 text-center' >
+                    <h1 className=' font-bold text-4xl' >
+                        Vantagens
+                    </h1>
+                </div>
+                <div className=' w-[80%] mx-[auto] h-[100%] pt-10 grid grid-cols-3 grid-rows-2 grid-flow-col my-0 items-center justify-center'>
+                    <div>
+                        <p>algo</p>
+                    </div>
                     <div>
                         <p>algo</p>
                     </div>
@@ -142,10 +153,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        
         </div>
-
-    
     </>
   )
 }
