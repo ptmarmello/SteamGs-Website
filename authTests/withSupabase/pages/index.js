@@ -1,49 +1,48 @@
 import React from 'react'
-import vid from '../src/assets/backgroundVideos/purpleDust.mp4'
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material'
-import centerImg from '../src/assets/images/cloud-technology-with-futuristic-hologram-smartwatch.jpg';
-import Image from 'next/image';
 import { Button } from '@mui/material';
 import styles from '../styles/Index.module.css'
 
 export default function Home() {
   return (
     <>
-        <div>
-            <video autoPlay muted={true} loop className='h-[100vh] w-[100vw] -z-8 absolute bg-cover object-cover' >
+        <div className={styles.indexImgbg} >
+            {/* <video autoPlay muted={true} loop className='h-[100vh] w-[100vw] -z-8 absolute bg-cover object-cover' >
                 <source src={vid} />
-            </video>
+            </video> */}
             <nav className='relative w-[85%] h-16 flex flex-1  items-center justify-between m-[auto]'>
                 <div className='ml-4'>Logo</div>
                 <div className='mr-4 flex'>
                     <ol className='grid grid-cols-4 gap-4 items-center justify-center' >
                         <li>
-                            <button>
+                            <Button>
                                 Sobre
-                            </button>
+                            </Button>
                         </li>
                         <li>
-                            <button>
+                            <Button>
                                 Sobre
-                            </button>
+                            </Button>
                         </li>
                         <li>
-                            <button>
+                            <Button>
                                 Sobre
-                            </button>
+                            </Button>
                         </li>
                         <li>
-                            <button>
+                            <Button>
                                 Sobre
-                            </button>
+                            </Button>
                         </li>
                     </ol>
-                    <button className='bg-blue-700 mx-2 px-2 py-2 rounded-md'>
-                        Login
-                    </button>
-                    <button className='bg-red-700 mx-2 px-2 py-2 rounded-md' >
-                        Começar!
-                    </button>
+                    <div className=' ml-4' >
+                        <Button variant='outlined' color='success' className='text-white border-teal-800 p-2 mr-2 rounded-lg bg-teal-900 hover:bg-neutral-900'>
+                            Login
+                        </Button>
+                        <Button variant='outlined' color="warning" className='text-white border-cyan-700 p-2 rounded-lg bg-cyan-800 hover:bg-neutral-900'>
+                            Começar!
+                        </Button>
+                    </div>
                 </div>
             </nav>
 
@@ -63,21 +62,24 @@ export default function Home() {
                                 O início da
                             </h6>
                             <h1  className='text-6xl'>
-                                Sua carreira <br/><span>lala </span> Começa aqui!
+                                Sua carreira <br/><span>&nbsp; &nbsp; </span> Começa aqui!
                             </h1>
                         </main>
                     </div>
                 </div>
 
-                <div className=' w-[90%] mx-[auto] h-fit fixed flex my-0'>
-                    <div className='grid grid-cols-2 gap-8' >
-                        <aside className={styles.indexImageLeft} id='indexImageLeft'>
-                            imagem da esquerda
-                        </aside>
-
-                        <aside className={styles.indexImageRight} id='indexImageRight'>
-                            imagem da direita
-                        </aside>
+                <div className=' w-[100%] mx-0 h-fit fixed flex my-[auto]'>
+                    <div className=' w-[95%] grid grid-cols-2 gap-8 mx-[auto] my-[0] items-center ' >
+                        <div className=' relative h-[100%] left-0 mt-24'>
+                            <aside className={styles.indexImageLeft} id='indexImageLeft'>
+                                imagem da esquerda
+                            </aside>
+                        </div>
+                        <div className='relative h-[100%] right-0 mt-24'>
+                            <aside className={styles.indexImageRight} id='indexImageRight'>
+                                imagem da direita
+                            </aside>
+                        </div>
                     </div>
                 </div>
                 
@@ -91,7 +93,7 @@ export default function Home() {
                         }}
                         
                         >
-                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl'>
+                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl bg-slate-800 bg-opacity-80 hover:bg-neutral-900'>
                                 Quero contratar
                             </Button>
                         </div>
@@ -102,7 +104,7 @@ export default function Home() {
                         onMouseLeave={()=>{
                             document.querySelector(`.${styles.indexImageRight}`).style.display='none'
                         }}>
-                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl'>
+                            <Button variant='outlined' className='text-white border-white p-10 rounded-2xl bg-slate-800 bg-opacity-80 hover:bg-neutral-900'>
                                 Quero ser Pro
                             </Button>
 
@@ -114,13 +116,35 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <div className=' min-w-full min-h-full' >
+                <div className=' w-[100%] mx-[auto] h-[100%] grid grid-cols-3 grid-rows-2 grid-flow-col my-0 items-center justify-center'>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                    <div>
+                        <p>algo</p>
+                    </div>
+                </div>
+            </div>
         
         </div>
 
-        <div>
-            
-            
-        </div>
     
     </>
   )
