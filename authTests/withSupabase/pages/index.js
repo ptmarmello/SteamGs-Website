@@ -1,6 +1,6 @@
 import React from 'react'
 import { GitHub, LinkedIn, Twitter, Instagram } from '@mui/icons-material'
-import { Button } from '@mui/material';
+import { Button, Divider } from '@mui/material';
 import styles from '../styles/Index.module.css'
 
 export default function Home() {
@@ -121,34 +121,53 @@ export default function Home() {
             </section>
 
             <div className=' min-w-full min-h-full' >
+                <div className='w-full mx-[auto] my-0 justify-center pt-10 text-center'>
+                    <ul className='grid grid-cols-4 gap-4 w-[90%] mx-[auto] my-0' >
+                        <li className=' w-full min-h-10 p-6 bg-stone-800 rounded-lg'>
+                            <p>Step </p>
+                        </li>
+                        <li className=' w-full min-h-10 p-6 bg-stone-800 rounded-lg'>
+                            <p>Step </p>
+                        </li>
+                        <li className=' w-full min-h-10 p-6 bg-stone-800 rounded-lg'>
+                            <p>Step </p>
+                        </li>
+                        <li className=' w-full min-h-10 p-6 bg-stone-800 rounded-lg'>
+                            <p>Step </p>
+                        </li>
+                    </ul>
+                </div>
                 <div className=' w-full mx-[auto] my-0 justify-center pt-24 text-center' >
                     <h1 className=' font-bold text-4xl' >
                         Vantagens
                     </h1>
+                    <p className='mt-4'>
+                        undertext
+                    </p>
                 </div>
-                <div className=' w-[80%] mx-[auto] h-[100%] pt-10 grid grid-cols-3 grid-rows-2 grid-flow-col my-0 items-center justify-center'>
-                    <div>
+                <div className=' w-[80%] mx-[auto] h-[100%] pt-10 grid gap-5 grid-cols-4 my-0 items-center justify-center'>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
-                    <div>
+                    <div className=' w-full h-56  border-sky-900 border-2 justify-center items-center rounded-lg flex hover:bg-stone-800'>
                         <p>algo</p>
                     </div>
                 </div>

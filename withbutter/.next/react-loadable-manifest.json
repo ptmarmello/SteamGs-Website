@@ -1,0 +1,38 @@
+{
+  "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/features": {
+    "id": "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/features",
+    "files": [
+      "static/chunks/components_landing-page-sections_features_js.js"
+    ]
+  },
+  "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/hero": {
+    "id": "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/hero",
+    "files": [
+      "static/chunks/components_landing-page-sections_hero_js.js"
+    ]
+  },
+  "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/testimonials": {
+    "id": "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/testimonials",
+    "files": [
+      "static/chunks/components_landing-page-sections_testimonials_js.js"
+    ]
+  },
+  "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/two-column-with-image": {
+    "id": "..\\components\\landing-page-sections\\landing-page-section.js -> @/components/landing-page-sections/two-column-with-image",
+    "files": [
+      "static/chunks/components_landing-page-sections_two-column-with-image_js.js"
+    ]
+  },
+  "..\\components\\landing-page-sections\\testimonials.js -> tiny-slider": {
+    "id": "..\\components\\landing-page-sections\\testimonials.js -> tiny-slider",
+    "files": [
+      "static/chunks/node_modules_tiny-slider_dist_tiny-slider_js.js"
+    ]
+  },
+  "_app.js -> bootstrap/dist/js/bootstrap.js": {
+    "id": "_app.js -> bootstrap/dist/js/bootstrap.js",
+    "files": [
+      "static/chunks/node_modules_bootstrap_dist_js_bootstrap_js.js"
+    ]
+  }
+}
