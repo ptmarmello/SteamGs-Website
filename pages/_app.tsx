@@ -32,6 +32,9 @@ if (!isServer) {
   bootstrap()
 }
 
+import Script from 'next/script'
+// import mermaid from 'mermaid'
+
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
@@ -61,5 +64,20 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  // mermaid.initialize({startOnLoad: true, securityLevel: 'loose'});
+  // mermaid.contentLoaded();
+
+  return <>
+    <Component {...pageProps} />
+    <Script
+        type="module"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+            __html: `
+            import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs";
+            mermaid.initialize({startOnLoad: true, securityLevel: 'loose'});
+            mermaid.contentLoaded();
+    `,
+    }} />
+  </>
 }

@@ -8,7 +8,7 @@
  */
 
 .notion {
-  --notion-max-width: 720px;
+  --notion-max-width: 80%;
   --notion-header-height: 54px;
 }
 
@@ -19,10 +19,12 @@
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
   line-height: 1.65;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .index-page {
-  --notion-max-width: 900px;
+  --notion-max-width: 90%;
 }
 
 .notion-text {
@@ -50,6 +52,11 @@
 
 .notion-nav-header-rhs {
   gap: 0.5rem;
+}
+
+.notion-full-width{
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .notion-gallery-grid {
@@ -141,17 +148,17 @@
 }
 
 @media only screen and (max-width: 920px) {
-  .index-page.notion-page {
+  /* .index-page.notion-page {
     padding-left: 2vw;
     padding-right: 2vw;
-  }
+  } */
 }
 
 @media only screen and (max-width: 720px) {
-  .notion-page {
+  /* .notion-page {
     padding-left: 2vw;
     padding-right: 2vw;
-  }
+  } */
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,40 +1,20 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://transitivebullsh.it/nextjs-notion-starter-kit">
     <img alt="Example article page" src="https://user-images.githubusercontent.com/552829/160132094-12875e09-41ec-450a-80fc-ae8cd488129d.jpg" width="689">
   </a>
-</p>
+</p> -->
 
 # Next.js Notion Starter Kit
 
-> The perfect starter kit for building websites with Next.js and Notion.
+> asdasd
 
-[![Build Status](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/actions/workflows/build.yml/badge.svg)](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/actions/workflows/build.yml) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
+<!-- [![Build Status](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/actions/workflows/build.yml/badge.svg)](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/actions/workflows/build.yml) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io) -->
 
 ## Intro
 
-This repo is what I use to power my personal blog and portfolio site [transitivebullsh.it](https://transitivebullsh.it).
-
-It uses Notion as a CMS, [react-notion-x](https://github.com/NotionX/react-notion-x), [Next.js](https://nextjs.org/), and [Vercel](https://vercel.com).
+<!-- It uses Notion as a CMS, [react-notion-x](https://github.com/NotionX/react-notion-x), [Next.js](https://nextjs.org/), and [Vercel](https://vercel.com). -->
 
 ## Features
-
-- Setup only takes a few minutes ([single config file](./site.config.ts)) 💪
-- Robust support for Notion content via [react-notion-x](https://github.com/NotionX/react-notion-x)
-- Built using Next.js, TS, and React
-- Excellent page speeds
-- Smooth image previews
-- Automatic social images
-- Automatic pretty URLs
-- Automatic table of contents
-- Full support for dark mode
-- Quick search via CMD+K / CMD+P
-- Responsive for different devices
-- Optimized for Next.js and Vercel
-
-## Demos
-
-- [Default demo](https://nextjs-notion-starter-kit.transitivebullsh.it) - Deployed from the `main` branch
-- [My site](https://transitivebullsh.it) - Deployed from the `transitive-bullshit` branch
 
 ## Setup
 
@@ -175,12 +155,7 @@ If you're using Redis, analytics, or any other feature which requires environmen
 
 If you want to test your redis builds with GitHub Actions, then you'll need to edit the [default build action](./.github/workflows/build.yml) to add `REDIS_HOST` and `REDIS_PASSWORD`. Here is an [example from my personal branch](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/blob/transitive-bullshit/.github/workflows/build.yml#L17-L21). You'll also need to add these environment variables to your GitHub repo as [repository secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-## Contributing
 
-See the [contribution guide](contributing.md) and join our amazing list of [contributors](https://github.com/transitive-bullshit/nextjs-notion-starter-kit/graphs/contributors)!
+<!-- ## License -->
 
-## License
-
-MIT © [Travis Fischer](https://transitivebullsh.it)
-
-Support my open source work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
+<!-- MIT © [Travis Fischer](https://transitivebullsh.it) -->

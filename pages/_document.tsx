@@ -2,12 +2,11 @@ import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 import { IconContext } from '@react-icons/all-files'
-
 export default class MyDocument extends Document {
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        <Html lang='en'>
+        <Html lang='pt-br'>
           <Head>
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
@@ -18,6 +17,13 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+            <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+            <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `mermaid.initialize({startOnLoad: true});`,
+            }}
+          />
           </Head>
 
           <body>

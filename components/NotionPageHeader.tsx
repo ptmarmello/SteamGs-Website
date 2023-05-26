@@ -24,11 +24,18 @@ const ToggleThemeButton = () => {
   }, [toggleDarkMode])
 
   return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
-      onClick={onToggleTheme}
-    >
-      {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+    <div>
+      {hasMounted && (
+          <a
+            className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
+            href='#'
+            role='button'
+            onClick={onToggleTheme}
+            title='Toggle dark mode'
+          >
+            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+          </a>
+        )}
     </div>
   )
 }
@@ -79,7 +86,6 @@ export const NotionPageHeader: React.FC<{
             .filter(Boolean)}
 
           <ToggleThemeButton />
-
           {isSearchEnabled && <Search block={block} title={null} />}
         </div>
       </div>
